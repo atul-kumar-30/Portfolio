@@ -68,5 +68,6 @@ A premium, interactive, and high-performance portfolio built for an **Aspiring S
 **Atul Kumar** is a recent B.Tech Computer Science Engineering Graduate from Graphic Era Hill University (2022–2026). He specializes in **Software Engineering** and **AI/ML systems**, with a particular interest in Computer Vision, Deep Learning models, and full-stack web applications.
 
 ---
-**Built with Passion & Precision ⚡**
+**Built with Passion & Precision ⚡** 
+
 
