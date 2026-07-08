@@ -4,7 +4,7 @@ function initTypingAnimation() {
   if (!el) return;
 
   const texts = [
-    'Software Engineer',
+    'Aspiring Software Engineer',
     'AI/ML Engineer'
   ];
 
