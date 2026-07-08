@@ -1,7 +1,7 @@
-[![Live Site](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://atul-kumar-30.github.io/Portfolio/)
+[![Live Site](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://portfolio-atul-kumar.vercel.app/)
 [![Tech Stack](https://img.shields.io/badge/Tech-SE%20%26%20AI%2FML-red?style=for-the-badge)](#tech-stack)
 
-A premium, interactive, and high-performance portfolio built for a **Software Engineer & AI/ML Specialist**. This project showcases deep technical skills, modern UI/UX principles, and a clear academic journey.
+A premium, interactive, and high-performance portfolio built for an **Aspiring Software Engineer & AI/ML Engineer**. This project showcases deep technical skills, modern UI/UX principles, and a clear academic journey.
 
 ---
 
@@ -10,8 +10,8 @@ A premium, interactive, and high-performance portfolio built for a **Software En
 - **💠 Premium Glassmorphism UI**: High-end design using `backdrop-filter: blur()`, CSS custom properties, and smooth gradients. 
 - **🌌 Dynamic Background**: An animated particle system with floating code symbols (C++, Python, logic) to reflect an engineering focus.
 - **⚡ Advanced Interactivity**:
-  - **Typing Animation**: Smart-cycling roles to immediately catch a recruiter's eye.
-  - **Stats Counters**: Real-time counting animations for years of study, projects, and certifications.
+  - **Typing Animation**: Smart-cycling roles (`Aspiring Software Engineer` & `AI/ML Engineer`) to immediately catch a recruiter's eye.
+  - **Stats Counters**: Real-time counting animations for years of study (4), projects (6+), and certifications (3).
   - **Project Hover Overlays**: Clean previews that reveal GitHub links on hover.
   - **Scroll-Reveal System**: Elements smoothly fade and slide in using the `IntersectionObserver` API for a premium desktop feel.
 - **🗺️ Interactive Journey**: A chronological timeline of my academic and learning path from 2022 to 2026.
@@ -23,16 +23,16 @@ A premium, interactive, and high-performance portfolio built for a **Software En
 ## 🛠️ Tech Stack
 
 ### Core Engineering
-- **Languages**: C, C++, Java, Python, JavaScript
-- **CS Foundations**: Data Structures & Algorithms (DSA), OOPs, OS, DBMS, Computer Networks
+- **Languages**: C, C++, Java, Python, JavaScript, SQL
+- **CS Foundations**: Data Structures & Algorithms (DSA), OOPs, OS, DBMS, Computer Networks, System Design
 
 ### AI & Machine Learning
-- **Libraries**: TensorFlow, OpenCV, CNN Architectures
-- **Tools**: Jupyter Lab, Oracle Cloud AI Services
+- **Libraries & Frameworks**: TensorFlow, Keras, OpenCV, NumPy, MTCNN, CNN Architectures
+- **Tools**: JupyterLab, Google Colab, Oracle Cloud AI Services
 
 ### Web Systems
 - **Frontend**: ReactJS, Modern CSS (Flexbox/Grid), Vanilla JS
-- **Backend/DB**: Flask (Python), Supabase (PostgreSQL), MySQL
+- **Backend/DB**: Flask (Python), Supabase (PostgreSQL)
 - **Integration**: REST APIs, Formspree AJAX
 
 ---
@@ -40,10 +40,11 @@ A premium, interactive, and high-performance portfolio built for a **Software En
 ## 📁 Project Structure
 
 ```bash
-├── index.html   # Main structure & SEO-optimized content
-├── style.css    # Premium design system & animations
-├── app.js       # Core logic, scroll reveals, & form handling
-└── Resume.pdf   # Downloadable professional CV
+├── index.html        # Main structure & SEO-optimized content
+├── style.css         # Premium design system & animations
+├── app.js            # Core logic, scroll reveals, & form handling
+├── Atul_Resume.pdf   # Downloadable professional CV
+└── README.md         # Documentation
 ```
 
 ---
@@ -64,7 +65,8 @@ A premium, interactive, and high-performance portfolio built for a **Software En
 
 ## 🎓 About the Author
 
-**Atul Kumar** is a B.Tech Computer Science Engineering student at Graphic Era Hill University (2022–2026). He specializes in **Software Engineering** and **AI/ML systems**, with a particular interest in Computer Vision and scalable backend architectures.
+**Atul Kumar** is a recent B.Tech Computer Science Engineering Graduate from Graphic Era Hill University (2022–2026). He specializes in **Software Engineering** and **AI/ML systems**, with a particular interest in Computer Vision, Deep Learning models, and full-stack web applications.
 
 ---
 **Built with Passion & Precision ⚡**
+

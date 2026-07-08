@@ -232,7 +232,7 @@ function showNotification(msg, type = 'success') {
   setTimeout(() => n.remove(), 5000);
 }
 
-// ===== INIT ALL =====
+// Touch app.js to sync GitHub timestamps
 document.addEventListener('DOMContentLoaded', () => {
   initTypingAnimation();
   initNavbar();
