@@ -1,73 +1,88 @@
-[![Live Site](https://img.shields.io/badge/Live-Demo-blue?style=for-the-badge)](https://portfolio-atul-kumar.vercel.app/)
-[![Tech Stack](https://img.shields.io/badge/Tech-SE%20%26%20AI%2FML-red?style=for-the-badge)](#tech-stack)
+# Atul Kumar - Personal Portfolio
 
-A premium, interactive, and high-performance portfolio built for an **Aspiring Software Engineer & AI/ML Engineer**. This project showcases deep technical skills, modern UI/UX principles, and a clear academic journey.
+A modern, responsive, and highly animated personal portfolio built using **React** and **Vite**. 
 
----
+This portfolio showcases my skills as an aspiring Software Engineer and AI/ML Engineer, featuring my technical skill sets, major projects (like DeepFake Detection and a Full-Stack Expense Tracker), certifications, and a timeline of my educational journey.
 
-## 🚀 Key Features
+## 🚀 Live Demo
 
-- **💠 Premium Glassmorphism UI**: High-end design using `backdrop-filter: blur()`, CSS custom properties, and smooth gradients. 
-- **🌌 Dynamic Background**: An animated particle system with floating code symbols (C++, Python, logic) to reflect an engineering focus.
-- **⚡ Advanced Interactivity**:
-  - **Typing Animation**: Smart-cycling roles (`Aspiring Software Engineer` & `AI/ML Engineer`) to immediately catch a recruiter's eye.
-  - **Stats Counters**: Real-time counting animations for years of study (4), projects (6+), and certifications (3).
-  - **Project Hover Overlays**: Clean previews that reveal GitHub links on hover.
-  - **Scroll-Reveal System**: Elements smoothly fade and slide in using the `IntersectionObserver` API for a premium desktop feel.
-- **🗺️ Interactive Journey**: A chronological timeline of my academic and learning path from 2022 to 2026.
-- **📱 Responsive by Design**: Fully optimized for mobile, tablet, and ultra-wide screens with a custom-engineered hamburger menu.
-- **✉️ AJAX Contact Form**: Integrated with Formspree for direct, secure, and real-time message delivery without page reloads.
+[View Live Portfolio](https://portfolio-atul-kumar.vercel.app/) *(Hosted on Vercel)*
 
----
+## 🛠️ Built With
 
-## 🛠️ Tech Stack
+*   **Frontend Framework:** [React.js](https://react.dev/)
+*   **Build Tool:** [Vite](https://vitejs.dev/)
+*   **Styling:** Vanilla CSS3 (Custom Design System, Glassmorphism, Dark Mode)
+*   **Animations:** Custom CSS Animations, Keyframes, IntersectionObserver (React Hooks)
+*   **Deployment:** Vercel (with custom `vercel.json` routing configuration)
 
-### Core Engineering
-- **Languages**: C, C++, Java, Python, JavaScript, SQL
-- **CS Foundations**: Data Structures & Algorithms (DSA), OOPs, OS, DBMS, Computer Networks, System Design
+## ✨ Key Features
 
-### AI & Machine Learning
-- **Libraries & Frameworks**: TensorFlow, Keras, OpenCV, NumPy, MTCNN, CNN Architectures
-- **Tools**: JupyterLab, Google Colab, Oracle Cloud AI Services
+*   **Component-Based Architecture:** Modular design with highly reusable React components (`Hero`, `Projects`, `Skills`, etc.).
+*   **Clean URL Routing:** Uses standard HTML5 pushState to create clean URLs (e.g. `/skills`, `/projects`) instead of hash anchors, with full Vercel SPA routing support.
+*   **Interactive UI & Typography:** Smooth scroll reveals, uppercase navigation styling, dynamic typing animations, automatic stat counters, and a responsive mobile hamburger menu.
+*   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, and Sudoku Validator.
+*   **Modern Aesthetic:** Deep space gradients, floating particle backgrounds, and glassmorphism styling.
+*   **Advanced Contact Form:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI (Recruiter / Developer / Student / Other) that dynamically requests more context.
 
-### Web Systems
-- **Frontend**: ReactJS, Modern CSS (Flexbox/Grid), Vanilla JS
-- **Backend/DB**: Flask (Python), Supabase (PostgreSQL)
-- **Integration**: REST APIs, Formspree AJAX
+## 💻 Running Locally
 
----
+If you want to run this project on your local machine, follow these steps:
 
-## 📁 Project Structure
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/atul-kumar-30/Portfolio.git
+    cd Portfolio
+    ```
 
-```bash
-├── index.html        # Main structure & SEO-optimized content
-├── style.css         # Premium design system & animations
-├── app.js            # Core logic, scroll reveals, & form handling
-├── Atul_Resume.pdf   # Downloadable professional CV
-└── README.md         # Documentation
+2.  **Install the dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open in your browser:**
+    Navigate to `http://localhost:5173` to view the app.
+
+## 📂 Project Structure
+
+```text
+├── public/                 # Static assets (Resume PDF, project screenshots)
+│   ├── Deepfake_Detection.png
+│   ├── Expense_Tracker.png
+│   ├── Suduko_validator.png
+│   └── Atul_Resume.pdf
+├── src/
+│   ├── components/         # Modular React components
+│   │   ├── About.jsx
+│   │   ├── AnimatedBackground.jsx
+│   │   ├── Certificates.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Education.jsx
+│   │   ├── Footer.jsx
+│   │   ├── Hero.jsx
+│   │   ├── Navbar.jsx
+│   │   ├── Projects.jsx
+│   │   ├── Skills.jsx
+│   │   └── Timeline.jsx
+│   ├── App.jsx             # Main Application Assembly & Observer Logic
+│   ├── index.css           # Global Styles & Animations
+│   └── main.jsx            # React Entry Point
+├── vercel.json             # Vercel SPA Routing Rules
+├── index.html              # HTML Shell
+├── package.json            # Project Dependencies
+└── vite.config.js          # Vite Configuration
 ```
 
----
+## 📬 Contact
 
-## ⚙️ How to Run Locally
-
-1. **Clone the Repo**:
-   ```bash
-   git clone https://github.com/atul-kumar-30/Portfolio.git
-   ```
-2. **Open the Project**:
-   Simply open `index.html` in any modern web browser.
-
-3. **Form Setup**:
-   To make the contact form work for your own email, update the `action` attribute in `index.html` and the `fetch` target in `app.js` with your [Formspree](https://formspree.io/) ID.
+*   **Email:** atulk864943@gmail.com
+*   **LinkedIn:** [linkedin.com/in/atul-kumar](https://www.linkedin.com/in/atul-kumar-805477335/)
+*   **GitHub:** [github.com/atul-kumar-30](https://github.com/atul-kumar-30)
 
 ---
-
-## 🎓 About the Author
-
-**Atul Kumar** is a recent B.Tech Computer Science Engineering Graduate from Graphic Era Hill University (2022–2026). He specializes in **Software Engineering** and **AI/ML systems**, with a particular interest in Computer Vision, Deep Learning models, and full-stack web applications.
-
----
-**Built with Passion & Precision ⚡** 
-
-
+*Designed & Developed by Atul Kumar © 2026*
