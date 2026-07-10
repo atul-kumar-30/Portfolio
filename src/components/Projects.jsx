@@ -74,6 +74,12 @@ const Projects = () => {
                     </svg>
                     GitHub
                   </a>
+                  <a href="https://air-quality-predictor-frontend.onrender.com" target="_blank" rel="noreferrer" className="proj-link">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M21.88,2.16a1,1,0,0,0-1-.16l-14,5a1,1,0,0,0-.56,1.45l3.85,6.67,1.88,5.65a1,1,0,0,0,.9.68,1,1,0,0,0,.32-.05l6-2a1,1,0,0,0,.64-1.2l-2-6,4.64-8.08A1,1,0,0,0,21.88,2.16Zm-7.79,9.45a1,1,0,0,0-.41.41L11,15l-2.61-4.52L13,7.56a1,1,0,0,0-1.74-1l-4.51,2.6,3-1.07,11.23-4Z"/>
+                    </svg>
+                    View App
+                  </a>
                 </div>
               </div>
             </div>
