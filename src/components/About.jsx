@@ -34,8 +34,8 @@ const About = () => {
           <p className="about-desc reveal">I'm Atul Kumar, a recent <strong>B.Tech CSE (2022-2026)</strong> graduate from Graphic
             Era Hill University,Dehradun passionate about <strong>Software Engineering</strong> and <strong>AI/ML</strong>. I have
             strong fundamentals in DSA, OOP, DBMS, and Computer Networks. I enjoy building practical applications — my key
-            projects include an AI-based DeepFake Detection System using TensorFlow and Flask, a full-stack Expense
-            Tracker with React and Supabase, and a Sudoku Validator using Flask and C++. I've also earned certifications
+            projects include an AI-based DeepFake Detection System using EfficientNet-B4, TensorFlow, and Flask, a full-stack Expense
+            Tracker with React and Supabase, and a feature-rich Ultimate Tic-Tac-Toe web app. I've also earned certifications
             in Oracle Cloud AI Foundations, Cybersecurity, and Generative AI. Eager to contribute to a team where
             technology creates real impact.</p>
 
@@ -52,8 +52,8 @@ const About = () => {
               <div className="highlight-icon">⚙️</div>
               <div>
                 <h4>Software Engineering</h4>
-                <p>Developed full-stack applications including a React + Supabase Expense Tracker and a Flask + C++ Sudoku
-                  Validator.</p>
+                <p>Developed full-stack applications including a React + Supabase Expense Tracker and a modern, 
+                  competitive Ultimate Tic-Tac-Toe game.</p>
               </div>
             </div>
             <div className="highlight-card">

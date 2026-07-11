@@ -70,12 +70,11 @@ const Timeline = () => {
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🧮</div>
+            <div className="timeline-icon">🎮</div>
             <div className="timeline-content">
               <span className="timeline-date">Early 2025</span>
-              <h3>Sudoku Validator Project</h3>
-              <p>Developed a high-performance <strong>Sudoku Validator</strong> using a C++ core backend and Flask API,
-                bridging system-level logic with web tech.</p>
+              <h3>Advanced Frontend Mastery</h3>
+              <p>Built <strong>Ultimate Tic-Tac-Toe</strong>, a competitive multiplayer web app showcasing advanced <strong>React</strong> state management, Supabase integration, and premium UI/UX design.</p>
             </div>
           </div>
 
