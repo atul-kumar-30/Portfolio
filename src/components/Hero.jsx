@@ -1,7 +1,19 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 const Hero = () => {
   const typingRef = useRef(null);
+  const dropdownRef = useRef(null);
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setShowDropdown(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   useEffect(() => {
     const el = typingRef.current;
@@ -55,7 +67,56 @@ const Hero = () => {
             <p className="hero-description">Recent B.Tech CSE Graduate from GEHU, Dehradun. Aspiring <strong>Software
                 Engineer</strong> & <strong>AI/ML Engineer</strong>, open to opportunities.</p>
             <div className="hero-buttons">
-              <a href="/Atul_Resume.pdf" className="btn btn--primary" download>⬇️ Download Resume</a>
+              <div className="resume-dropdown-container" ref={dropdownRef} style={{ position: 'relative', display: 'inline-block' }}>
+                <button 
+                  className="btn btn--primary" 
+                  onClick={() => setShowDropdown(!showDropdown)}
+                >
+                  📄 Resume 
+                  <span style={{ fontSize: '0.8em', marginLeft: '8px' }}>▼</span>
+                </button>
+                {showDropdown && (
+                  <div className="resume-dropdown" style={{
+                    position: 'absolute',
+                    top: '100%',
+                    left: '0',
+                    marginTop: '10px',
+                    background: 'var(--surface)',
+                    backdropFilter: 'blur(10px)',
+                    border: '1px solid var(--glass-border)',
+                    borderRadius: 'var(--radius)',
+                    padding: '12px',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    gap: '12px',
+                    zIndex: 20,
+                    minWidth: '240px',
+                    boxShadow: 'var(--shadow)'
+                  }}>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.9rem', fontWeight: '500', color: 'var(--text)' }}>Atul_Resume.pdf</span>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        <a href="/Atul_Resume.pdf" target="_blank" rel="noreferrer" className="btn btn--primary" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>View</a>
+                        <a href="/Atul_Resume.pdf" download className="btn btn--outline" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>⬇️</a>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.9rem', fontWeight: '500', color: 'var(--text)' }}>Atul_Resume_FullStack.pdf</span>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        <a href="/Atul_Resume_FullStack.pdf" target="_blank" rel="noreferrer" className="btn btn--primary" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>View</a>
+                        <a href="/Atul_Resume_FullStack.pdf" download className="btn btn--outline" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>⬇️</a>
+                      </div>
+                    </div>
+                    <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                      <span style={{ fontSize: '0.9rem', fontWeight: '500', color: 'var(--text)' }}>Atul_Resume_SDE.pdf</span>
+                      <div style={{ display: 'flex', gap: '8px' }}>
+                        <a href="/Atul_Resume_SDE.pdf" target="_blank" rel="noreferrer" className="btn btn--primary" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>View</a>
+                        <a href="/Atul_Resume_SDE.pdf" download className="btn btn--outline" style={{ padding: '6px 12px', fontSize: '0.8rem' }}>⬇️</a>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
               <a href="#projects" className="btn btn--outline">🚀 View My Work</a>
             </div>
             <div className="floating-social">

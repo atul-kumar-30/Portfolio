@@ -117,6 +117,15 @@ const Timeline = () => {
             </div>
           </div>
 
+          <div className="timeline-item">
+            <div className="timeline-icon">🌍</div>
+            <div className="timeline-content">
+              <span className="timeline-date">July 2026</span>
+              <h3>Air Quality Predictor</h3>
+              <p>Developed an intuitive application to predict air quality indices using machine learning, helping users monitor environmental health.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
