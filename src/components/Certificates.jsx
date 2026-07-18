@@ -20,7 +20,7 @@ const Certificates = () => {
             <h3>Oracle Cloud Infrastructure AI Foundations</h3>
             <p className="cert-org">Oracle University — August 2025</p>
             <p className="cert-desc">Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate. Recognized by Oracle
-              Corporation, valid until August 2027.</p>
+              Corporation, valid until August 2028.</p>
             <a href="https://www.linkedin.com/posts/activity-7367123225211777024-C59U" target="_blank" rel="noreferrer"
               className="btn btn--outline">🎖️ View Credential</a>
           </div>
