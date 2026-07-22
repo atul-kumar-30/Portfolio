@@ -31,13 +31,9 @@ const About = () => {
       <div className="container">
         <h2 className="section-title reveal">👨‍💻 <span className="accent">About</span> Me</h2>
         <div className="about-content">
-          <p className="about-desc reveal">I'm Atul Kumar, a recent <strong>B.Tech CSE (2022-2026)</strong> graduate from Graphic
-            Era Hill University,Dehradun passionate about <strong>Software Engineering</strong> and <strong>AI/ML</strong>. I have
-            strong fundamentals in DSA, OOP, DBMS, and Computer Networks. I enjoy building practical applications — my key
-            projects include an AI-based DeepFake Detection System using EfficientNet-B4, TensorFlow, and Flask, a full-stack Expense
-            Tracker with React and Supabase, and a feature-rich Ultimate Tic-Tac-Toe web app. I've also earned certifications
-            in Oracle Cloud AI Foundations, Cybersecurity, and Generative AI. Eager to contribute to a team where
-            technology creates real impact.</p>
+          <p className="about-desc reveal">
+            I'm Atul Kumar, a recent <strong>B.Tech CSE</strong> graduate from Graphic Era Hill University. I specialize in building full-stack applications, integrating <strong>AI/ML systems</strong>, working with databases and authentication, and implementing real-time features. I am passionate about software engineering and eager to contribute to a team where technology creates a real impact.
+          </p>
 
           <div className="about-highlights">
             <div className="highlight-card">

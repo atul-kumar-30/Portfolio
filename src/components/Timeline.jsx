@@ -126,6 +126,15 @@ const Timeline = () => {
             </div>
           </div>
 
+          <div className="timeline-item">
+            <div className="timeline-icon">🚀</div>
+            <div className="timeline-content">
+              <span className="timeline-date">Late July 2026</span>
+              <h3>Full-Stack & AI Applications</h3>
+              <p>Engineered two robust MERN stack applications: a <strong>Project Tracker</strong> featuring drag-and-drop Kanban boards and role-based access, and an <strong>AI Job Tracker</strong> that integrates the Gemini API for intelligent cover letter generation and ATS resume scoring.</p>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
