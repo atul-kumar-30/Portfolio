@@ -4,7 +4,7 @@ const Projects = () => {
   return (
     <section id="projects" className="section">
       <div className="container">
-        <h2 className="section-title reveal">📁 <span className="accent">Main</span> Projects</h2>
+        <h2 className="section-title reveal">🚀 <span className="accent">Main</span> Projects</h2>
         <div className="projects-grid">
           
           <div className="project-card">

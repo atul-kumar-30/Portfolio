@@ -15,7 +15,6 @@ const Education = () => {
                 <span>🏛️ Graphic Era Hill University, Dehradun</span>
                 <span>📍 Dehradun, India</span>
                 <span>📅 2022 – 2026</span>
-                <span>📊 CGPA: 7.22 / 10</span>
               </div>
             </div>
           </div>

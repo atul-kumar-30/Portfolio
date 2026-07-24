@@ -127,7 +127,7 @@ const Timeline = () => {
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🚀</div>
+            <div className="timeline-icon">🤖</div>
             <div className="timeline-content">
               <span className="timeline-date">Late July 2026</span>
               <h3>Full-Stack & AI Applications</h3>

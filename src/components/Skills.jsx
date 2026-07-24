@@ -4,7 +4,7 @@ const Skills = () => {
   return (
     <section id="skills" className="section section--alt">
       <div className="container">
-        <h2 className="section-title reveal">⚙️ <span className="accent">Technical</span> Skills</h2>
+        <h2 className="section-title reveal">🖥️ <span className="accent">Technical</span> Skills</h2>
         <div className="skills-grid">
           <div className="skill-category">
             <div className="skill-cat-header">

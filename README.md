@@ -24,6 +24,7 @@ This portfolio showcases my skills as an aspiring Software Engineer and AI/ML En
 *   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, and Sudoku Validator.
 *   **Modern Aesthetic:** Deep space gradients, floating particle backgrounds, and glassmorphism styling.
 *   **Advanced Contact Form:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI (Recruiter / Developer / Student / Other) that dynamically requests more context.
+*   **UI/UX Polish:** Unified contact section with official SVG social logos, and consistent, attractive emoji iconography across the timeline, skills, and projects sections.
 
 ## 💻 Running Locally
 

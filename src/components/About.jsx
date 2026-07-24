@@ -37,7 +37,7 @@ const About = () => {
 
           <div className="about-highlights">
             <div className="highlight-card">
-              <div className="highlight-icon">🧠</div>
+              <div className="highlight-icon">🤖</div>
               <div>
                 <h4>AI & Machine Learning</h4>
                 <p>Built an AI-powered DeepFake Detection System using TensorFlow, EfficientNet-B4, and Flask with
@@ -45,7 +45,7 @@ const About = () => {
               </div>
             </div>
             <div className="highlight-card">
-              <div className="highlight-icon">⚙️</div>
+              <div className="highlight-icon">💻</div>
               <div>
                 <h4>Software Engineering</h4>
                 <p>Developed full-stack applications including a React + Supabase Expense Tracker and a modern, 
@@ -53,7 +53,7 @@ const About = () => {
               </div>
             </div>
             <div className="highlight-card">
-              <div className="highlight-icon">🔬</div>
+              <div className="highlight-icon">💡</div>
               <div>
                 <h4>Problem Solving</h4>
                 <p>Strong foundation in DSA, OOP, and system design — passionate about writing efficient, scalable code.
