@@ -1,10 +1,18 @@
 import React from 'react';
+import skillsIcon from '../assets/skills-icon.png';
 
 const Skills = () => {
   return (
     <section id="skills" className="section section--alt">
       <div className="container">
-        <h2 className="section-title reveal">🖥️ <span className="accent">Technical</span> Skills</h2>
+        <h2 className="section-title reveal">
+          <img 
+            src={skillsIcon} 
+            alt="Skills Icon" 
+            style={{ width: '1.2em', height: '1.2em', verticalAlign: 'middle', marginRight: '0.3em', transform: 'translateY(-4px)' }} 
+          />
+          <span className="accent">Technical</span> Skills
+        </h2>
         <div className="skills-grid">
           <div className="skill-category">
             <div className="skill-cat-header">

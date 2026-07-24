@@ -55,9 +55,10 @@ If you want to run this project on your local machine, follow these steps:
 ├── public/                 # Static assets (Resume PDF, project screenshots)
 │   ├── Deepfake_Detection.png
 │   ├── Expense_Tracker.png
-│   ├── Suduko_validator.png
 │   └── Atul_Resume.pdf
 ├── src/
+│   ├── assets/             # Images and Icons
+│   │   └── skills-icon.png
 │   ├── components/         # Modular React components
 │   │   ├── About.jsx
 │   │   ├── AnimatedBackground.jsx
