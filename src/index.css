@@ -954,7 +954,7 @@ a {
 }
 
 .project-preview {
-  height: 200px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1784,4 +1784,19 @@ a.contact-value:hover {
     transform: translateX(0);
     opacity: 1;
   }
+}
+/* ===== LOADING SCREEN ===== */
+.loading-screen {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+.loading-screen.fade-out {
+  opacity: 0;
+  pointer-events: none;
 }

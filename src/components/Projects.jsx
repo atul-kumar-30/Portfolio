@@ -9,7 +9,7 @@ const Projects = () => {
           
           <div className="project-card">
             <div className="project-preview project-preview--image">
-              <img src="/Expense_Tracker.png" alt="Expense Tracker Dashboard" className="project-screenshot" />
+              <img src="/Expense_Tracker.png" alt="Expense Tracker Dashboard" className="project-screenshot" style={{ objectFit: 'contain', objectPosition: 'center', backgroundColor: '#18181B' }} />
               <div className="project-overlay">
                 <div className="project-overlay-links">
                   <a href="https://github.com/atul-kumar-30/Expense_Tracker" target="_blank" rel="noreferrer" className="proj-link">
@@ -123,6 +123,12 @@ const Projects = () => {
             </div>
           </div>
 
+        </div>
+        
+        <div style={{ textAlign: 'center', marginTop: '3rem' }}>
+          <a href="https://github.com/atul-kumar-30" target="_blank" rel="noreferrer" className="btn btn--outline" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+            View More on GitHub
+          </a>
         </div>
       </div>
     </section>

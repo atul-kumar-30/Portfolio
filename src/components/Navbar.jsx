@@ -55,7 +55,8 @@ const Navbar = () => {
     const target = document.querySelector(id);
     const navbar = document.getElementById('navbar');
     if (target && navbar) {
-      const offset = navbar.offsetHeight + 10;
+      // Offset by navbar height and skip some of the top padding (approx 60px)
+      const offset = navbar.offsetHeight - 60;
       window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
     }
   };
@@ -65,10 +66,10 @@ const Navbar = () => {
       <div className="nav-container">
         <div className="nav-logo">⚡ Atul Kumar</div>
         <div className={`nav-menu ${menuActive ? 'active' : ''}`} id="nav-menu">
-          {['#about', '#skills', '#projects', '#certificates', '#education', '#timeline', '#contact'].map(id => (
+          {['#home', '#about', '#skills', '#projects', '#certificates', '#education', '#timeline', '#contact'].map(id => (
             <a
               key={id}
-              href={id}
+              style={{ cursor: 'pointer' }}
               className={`nav-link ${activeLink === id ? 'active' : ''}`}
               onClick={(e) => handleLinkClick(e, id)}
             >

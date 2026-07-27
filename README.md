@@ -2,7 +2,7 @@
 
 A modern, responsive, and highly animated personal portfolio built using **React** and **Vite**. 
 
-This portfolio showcases my skills as an aspiring Software Engineer and AI/ML Engineer, featuring my technical skill sets, major projects (like DeepFake Detection and a Full-Stack Expense Tracker), certifications, and a timeline of my educational journey.
+This portfolio showcases my skills as a Software Engineer, featuring my technical skill sets, major projects (like DeepFake Detection and a Full-Stack Expense Tracker), certifications, and a timeline of my educational journey.
 
 ## 🚀 Live Demo
 
@@ -55,7 +55,9 @@ If you want to run this project on your local machine, follow these steps:
 ├── public/                 # Static assets (Resume PDF, project screenshots)
 │   ├── Deepfake_Detection.png
 │   ├── Expense_Tracker.png
-│   └── Atul_Resume.pdf
+│   ├── Atul_Kumar_Resume.pdf
+│   ├── GEHU_Dehradun_Campus.jpg
+│   └── School.jpeg
 ├── src/
 │   ├── assets/             # Images and Icons
 │   │   └── skills-icon.png

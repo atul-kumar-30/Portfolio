@@ -6,56 +6,48 @@ const Education = () => {
       <div className="container">
         <h2 className="section-title reveal">🎓 <span className="accent">Education</span></h2>
         <div className="edu-card">
-          <div className="edu-header">
-            <div className="edu-icon">🎓</div>
-            <div className="edu-info">
-              <h3>Bachelor of Technology (B.Tech)</h3>
-              <h4>Computer Science Engineering</h4>
+          <div className="edu-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flex: 1, minWidth: '300px' }}>
+              <div className="edu-icon">🎓</div>
+              <div className="edu-info">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1rem' }}>
+                <h3 style={{ margin: 0, fontSize: '1.6rem' }}>Bachelor of Technology</h3>
+                <span style={{ display: 'inline-block', width: 'fit-content', padding: '6px 14px', background: 'rgba(56, 189, 248, 0.1)', color: 'var(--primary)', border: '1px solid rgba(56, 189, 248, 0.2)', borderRadius: '20px', fontWeight: 600, fontSize: '0.9rem', letterSpacing: '0.5px' }}>
+                  💻 Computer Science & Engineering
+                </span>
+              </div>
               <div className="edu-tags">
                 <span>🏛️ Graphic Era Hill University, Dehradun</span>
                 <span>📍 Dehradun, India</span>
-                <span>📅 2022 – 2026</span>
+                <span>📅 2022 – 2026 (Completed)</span>
               </div>
+              </div>
+            </div>
+            <div className="edu-image" style={{ width: '100%', maxWidth: '320px', height: '200px', borderRadius: 'var(--radius)', overflow: 'hidden', border: '1px solid var(--glass-border)', flexShrink: 0, alignSelf: 'flex-start' }}>
+              <img src="/GEHU_Dehradun_Campus.jpg" alt="Graphic Era Hill University" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />
             </div>
           </div>
-          <div className="edu-achievements">
-            <div className="achievement">
-              <span className="ach-icon">🏆</span>
-              <div>
-                <h5>Oracle Cloud AI Foundations Certified</h5>
-                <p>Earned Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate — valid until August 2027.
-                </p>
+          <hr style={{ border: 'none', borderTop: '1px solid var(--glass-border)', margin: '3rem 0' }} />
+          
+          <div className="edu-header" style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '2rem' }}>
+            <div style={{ display: 'flex', gap: '1.5rem', flex: 1, minWidth: '300px' }}>
+              <div className="edu-icon">🏫</div>
+              <div className="edu-info">
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem', marginBottom: '1rem' }}>
+                <h3 style={{ margin: 0, fontSize: '1.6rem' }}>Schooling (Class XII)</h3>
+                <span style={{ display: 'inline-block', width: 'fit-content', padding: '6px 14px', background: 'rgba(56, 189, 248, 0.1)', color: 'var(--primary)', border: '1px solid rgba(56, 189, 248, 0.2)', borderRadius: '20px', fontWeight: 600, fontSize: '0.9rem', letterSpacing: '0.5px' }}>
+                  📚 Science (PCM)
+                </span>
+              </div>
+              <div className="edu-tags">
+                <span>🏛️ Army Public School No. 2</span>
+                <span>📍 Roorkee, India</span>
+                <span>📅 2022 (Completed)</span>
+              </div>
               </div>
             </div>
-            <div className="achievement">
-              <span className="ach-icon">🔐</span>
-              <div>
-                <h5>Cybersecurity Analyst Job Simulation</h5>
-                <p>Completed IAM fundamentals, IAM strategy assessment, and crafting custom IAM solutions via TATA
-                  Consultancy + Forage.</p>
-              </div>
-            </div>
-            <div className="achievement">
-              <span className="ach-icon">🤖</span>
-              <div>
-                <h5>Introduction to Generative AI</h5>
-                <p>Completed Google Cloud & Simplilearn SkillUP course on Generative AI fundamentals and LLMs.</p>
-              </div>
-            </div>
-            <div className="achievement">
-              <span className="ach-icon">🧠</span>
-              <div>
-                <h5>AI & ML Projects</h5>
-                <p>Built an AI-powered DeepFake Detection System using TensorFlow, EfficientNet-B4, MTCNN, and Flask.</p>
-              </div>
-            </div>
-            <div className="achievement">
-              <span className="ach-icon">🖥️</span>
-              <div>
-                <h5>Software Development Projects</h5>
-                <p>Built a full-stack Expense Tracker (React + Supabase) and a Sudoku Validator (Flask + C++) during
-                  degree.</p>
-              </div>
+            <div className="edu-image" style={{ width: '100%', maxWidth: '320px', height: '200px', borderRadius: 'var(--radius)', overflow: 'hidden', border: '1px solid var(--glass-border)', flexShrink: 0, alignSelf: 'flex-start' }}>
+              <img src="/School.jpeg" alt="Army Public School No. 2 Roorkee" style={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.3s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} />
             </div>
           </div>
         </div>

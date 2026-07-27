@@ -63,9 +63,9 @@ const Contact = () => {
         <h2 className="section-title reveal">✉️ <span className="accent">Get In</span> Touch</h2>
         <div className="contact-content">
           <div className="contact-info">
-            <h3>Let's Connect</h3>
-            <p>I'm actively looking for opportunities in <strong>Software Engineering</strong> and <strong>AI/ML</strong>.
-              Whether it's an internship, research collaboration, or a full-time role — let's connect!</p>
+            <h3>Drop a Message</h3>
+            <p>I'm actively open to roles in <strong>Software Engineering</strong> and <strong>AI/ML</strong>.
+              Feel free to reach out regarding full-time positions, internships, or project collaborations.</p>
             <div className="contact-details">
               <a href="https://mail.google.com/mail/?view=cm&fs=1&to=atulk864943@gmail.com" target="_blank" rel="noopener noreferrer" className="contact-item reveal" style={{ textDecoration: 'none', color: 'inherit' }}>
                 <div className="contact-icon">

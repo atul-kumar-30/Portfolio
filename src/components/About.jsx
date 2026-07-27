@@ -35,47 +35,20 @@ const About = () => {
             I'm Atul Kumar, a recent <strong>B.Tech CSE</strong> graduate from Graphic Era Hill University. I specialize in building full-stack applications, integrating <strong>AI/ML systems</strong>, working with databases and authentication, and implementing real-time features. I am passionate about software engineering and eager to contribute to a team where technology creates a real impact.
           </p>
 
-          <div className="about-highlights">
-            <div className="highlight-card">
-              <div className="highlight-icon">🤖</div>
-              <div>
-                <h4>AI & Machine Learning</h4>
-                <p>Built an AI-powered DeepFake Detection System using TensorFlow, EfficientNet-B4, and Flask with
-                  real-time image and video analysis.</p>
-              </div>
-            </div>
-            <div className="highlight-card">
-              <div className="highlight-icon">💻</div>
-              <div>
-                <h4>Software Engineering</h4>
-                <p>Developed full-stack applications including a React + Supabase Expense Tracker and a modern, 
-                  competitive Ultimate Tic-Tac-Toe game.</p>
-              </div>
-            </div>
-            <div className="highlight-card">
-              <div className="highlight-icon">💡</div>
-              <div>
-                <h4>Problem Solving</h4>
-                <p>Strong foundation in DSA, OOP, and system design — passionate about writing efficient, scalable code.
-                </p>
-              </div>
-            </div>
-          </div>
-
           <div className="stats-grid" ref={statsRef}>
-            <div className="stat-card">
+            <div className="stat-card" onClick={() => document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Education">
               <span className="stat-num" data-target="4">0</span><span className="stat-suffix"></span>
               <span className="stat-label">Years of Study</span>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Projects">
               <span className="stat-num" data-target="7">0</span><span className="stat-suffix">+</span>
               <span className="stat-label">Projects Built</span>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Technologies">
               <span className="stat-num" data-target="15">0</span><span className="stat-suffix">+</span>
               <span className="stat-label">Technologies</span>
             </div>
-            <div className="stat-card">
+            <div className="stat-card" onClick={() => document.getElementById('certificates')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Certifications">
               <span className="stat-num" data-target="3">0</span><span className="stat-suffix"></span>
               <span className="stat-label">Certifications</span>
             </div>

@@ -8,8 +8,8 @@ const Hero = () => {
     if (!el) return;
 
     const texts = [
-      'Aspiring Software Engineer',
-      'AI/ML Engineer'
+      'Building Full-Stack Apps',
+      'Developing AI/ML Systems'
     ];
 
     let tIdx = 0, cIdx = 0, deleting = false;
@@ -52,9 +52,7 @@ const Hero = () => {
             <p className="hero-typing">
               <span id="typing-text" ref={typingRef}></span><span className="cursor">|</span>
             </p>
-            <p className="hero-description">Recent B.Tech CSE Graduate from GEHU, Dehradun. Aspiring <strong>Software
-                Engineer</strong> & <strong>AI/ML Engineer</strong>, open to opportunities.</p>
-            <div className="hero-buttons">
+            <div className="hero-buttons" style={{ marginTop: '2rem' }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '16px', background: 'var(--surface)', border: '1px solid var(--glass-border)', padding: '8px 16px', borderRadius: 'var(--radius)', backdropFilter: 'blur(10px)' }}>
                 <span style={{ fontWeight: '600', color: 'var(--text)' }}>📄 Resume</span>
                 <div style={{ display: 'flex', gap: '8px' }}>
@@ -66,7 +64,7 @@ const Hero = () => {
                   </a>
                 </div>
               </div>
-              <a href="#projects" className="btn btn--outline">🚀 View My Work</a>
+              <a href="#projects" className="btn btn--outline">View My Work ➔</a>
             </div>
 
           </div>
