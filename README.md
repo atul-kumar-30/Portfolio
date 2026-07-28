@@ -21,7 +21,7 @@ This portfolio showcases my skills as a Software Engineer, featuring my technica
 *   **Component-Based Architecture:** Modular design with highly reusable React components (`Hero`, `Projects`, `Skills`, etc.).
 *   **Clean URL Routing:** Uses standard HTML5 pushState to create clean URLs (e.g. `/skills`, `/projects`) instead of hash anchors, with full Vercel SPA routing support.
 *   **Interactive UI & Typography:** Smooth scroll reveals, uppercase navigation styling, dynamic typing animations, automatic stat counters, and a responsive mobile hamburger menu.
-*   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, and Sudoku Validator.
+*   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, Air Quality Predictor, and Ultimate Tic-Tac-Toe.
 *   **Modern Aesthetic:** Deep space gradients, floating particle backgrounds, and glassmorphism styling.
 *   **Advanced Contact Form:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI (Recruiter / Developer / Student / Other) that dynamically requests more context.
 *   **UI/UX Polish:** Unified contact section with official SVG social logos, and consistent, attractive emoji iconography across the timeline, skills, and projects sections.
@@ -55,6 +55,8 @@ If you want to run this project on your local machine, follow these steps:
 ├── public/                 # Static assets (Resume PDF, project screenshots)
 │   ├── Deepfake_Detection.png
 │   ├── Expense_Tracker.png
+│   ├── air quality predictor.png
+│   ├── tic-tac-toe.png
 │   ├── Atul_Kumar_Resume.pdf
 │   ├── GEHU_Dehradun_Campus.jpg
 │   └── School.jpeg

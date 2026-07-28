@@ -20,7 +20,7 @@ const Timeline = () => {
         <div className="timeline">
 
           <div className="timeline-item">
-            <div className="timeline-icon">📚</div>
+            <div className="timeline-icon">🌱</div>
             <div className="timeline-content">
               <span className="timeline-date">2020</span>
               <h3>Completed 10th Grade</h3>
@@ -30,7 +30,7 @@ const Timeline = () => {
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🏫</div>
+            <div className="timeline-icon">📖</div>
             <div className="timeline-content">
               <span className="timeline-date">2022</span>
               <h3>Completed 12th Grade</h3>
@@ -40,7 +40,7 @@ const Timeline = () => {
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">💻</div>
+            <div className="timeline-icon">🧱</div>
             <div className="timeline-content">
               <span className="timeline-date">2022 – 2023</span>
               <h3>Initial Phase: Foundations</h3>
@@ -50,31 +50,31 @@ const Timeline = () => {
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">⚙️</div>
+            <div className="timeline-icon">🔬</div>
             <div className="timeline-content">
               <span className="timeline-date">2023 – 2024</span>
               <h3>Advanced Algorithms & Core CS</h3>
-              <p>Learned <strong>Java</strong> and <strong>DAA (Design & Analysis of Algorithms)</strong>. Mastered core
+              <p>Learned <strong>Java</strong> and <strong>DAA (Design & Analysis of Algorithms)</strong>. Studied core
                 CS subjects: <strong>OS, DBMS, and Computer Networks (CN)</strong>.</p>
             </div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🌐</div>
+            <div className="timeline-icon">🎨</div>
             <div className="timeline-content">
               <span className="timeline-date">Late 2024</span>
-              <h3>Web Development Mastery</h3>
+              <h3>Web Development Foundations</h3>
               <p>Transitioned into building for the web. Learned <strong>HTML, CSS, and JavaScript</strong> to create
                 responsive and interactive user interfaces.</p>
             </div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🎮</div>
+            <div className="timeline-icon">🛠️</div>
             <div className="timeline-content">
-              <span className="timeline-date">Early 2025</span>
-              <h3>Advanced Frontend Mastery</h3>
-              <p>Built <strong>Ultimate Tic-Tac-Toe</strong>, a competitive multiplayer web app showcasing advanced <strong>React</strong> state management, Supabase integration, and premium UI/UX design.</p>
+              <span className="timeline-date">July 2025 – Sep 2025</span>
+              <h3>Core Development Projects</h3>
+              <p>Built the <a href="https://github.com/atul-kumar-30/Picoc-Interpreter" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Picoc Interpreter</strong></a> (a custom C-based engine), alongside a fully responsive <a href="https://github.com/atul-kumar-30/Dynamic-Weather-App" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Dynamic Weather App</strong></a> and a high-precision <a href="https://github.com/atul-kumar-30/Stopwatch-web-app" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Stopwatch</strong></a>. These projects strengthened my systems programming and modern frontend UI skills.</p>
             </div>
           </div>
 
@@ -92,18 +92,21 @@ const Timeline = () => {
             <div className="timeline-icon">🧠</div>
             <div className="timeline-content">
               <span className="timeline-date">2025 – 2026</span>
-              <h3>Final Year Project: Deepfake Detection</h3>
-              <p>Extensive research and development of a CNN-based system to detect digital manipulation in image and
-                video media.</p>
+              <h3>Final Year Project</h3>
+              <p>Developed a <a href="https://github.com/atul-kumar-30/Deepfake-Detection" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Deepfake Detection</strong></a> AI system to combat digital manipulation. Leveraging a custom CNN and MTCNN for precise face extraction, it accurately identifies fake high-resolution images and videos.</p>
             </div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">💰</div>
+            <div className="timeline-icon">📊</div>
             <div className="timeline-content">
-              <span className="timeline-date">Feb – March 2026</span>
-              <h3>Modern Expense Tracker</h3>
-              <p>Engineered a full-stack financial tool with React and Supabase, featuring secure authentication and
+              <span className="timeline-date">Feb 2026 – March 2026</span>
+              <h3>
+                <a href="https://github.com/atul-kumar-30/Expense_Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
+                  Modern Expense Tracker
+                </a>
+              </h3>
+              <p>Built a full-stack financial tool with React and Supabase, featuring secure authentication and
                 real-time data synchronization.</p>
             </div>
           </div>
@@ -121,17 +124,21 @@ const Timeline = () => {
             <div className="timeline-icon">🌍</div>
             <div className="timeline-content">
               <span className="timeline-date">July 2026</span>
-              <h3>Air Quality Predictor</h3>
-              <p>Developed an intuitive application to predict air quality indices using machine learning, helping users monitor environmental health.</p>
+              <h3>
+                <a href="https://github.com/atul-kumar-30/Air-Quality-Predictor" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
+                  Air Quality Predictor
+                </a>
+              </h3>
+              <p>Developed a machine learning-based web application capable of analyzing and predicting real-time Air Quality Indices (AQI) to promote environmental awareness.</p>
             </div>
           </div>
 
           <div className="timeline-item">
-            <div className="timeline-icon">🤖</div>
+            <div className="timeline-icon">🪄</div>
             <div className="timeline-content">
               <span className="timeline-date">Late July 2026</span>
               <h3>Full-Stack & AI Applications</h3>
-              <p>Engineered two robust MERN stack applications: a <strong>Project Tracker</strong> featuring drag-and-drop Kanban boards and role-based access, and an <strong>AI Job Tracker</strong> that integrates the Gemini API for intelligent cover letter generation and ATS resume scoring.</p>
+              <p>Created two robust MERN stack applications: a <a href="https://github.com/atul-kumar-30/Project-Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Project Tracker</strong></a> featuring drag-and-drop Kanban boards and role-based access, and an <a href="https://github.com/atul-kumar-30/AI-Job-Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>AI Job Tracker</strong></a> that integrates the Gemini API for intelligent cover letter generation and ATS resume scoring.</p>
             </div>
           </div>
 

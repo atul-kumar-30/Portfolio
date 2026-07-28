@@ -32,7 +32,7 @@ const Skills = () => {
           <div className="skill-category">
             <div className="skill-cat-header">
               <span className="skill-cat-icon">💻</span>
-              <h3>Programming</h3>
+              <h3>Programming Languages</h3>
             </div>
             <div className="skill-tags">
               <span className="skill-tag">C</span>
@@ -40,6 +40,7 @@ const Skills = () => {
               <span className="skill-tag">Java</span>
               <span className="skill-tag">Python</span>
               <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">SQL</span>
             </div>
           </div>
           <div className="skill-category">
