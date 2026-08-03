@@ -9,7 +9,7 @@ const Projects = () => {
           
           <div className="project-card">
             <div className="project-preview project-preview--image">
-              <img src="/Expense_Tracker.png" alt="Expense Tracker Dashboard" className="project-screenshot" style={{ objectFit: 'contain', objectPosition: 'center', backgroundColor: '#18181B' }} />
+              <img src="/Expense_Tracker.png" alt="Expense Tracker Dashboard" className="project-screenshot" style={{ objectFit: 'contain', objectPosition: 'center', backgroundColor: '#000000' }} />
               <div className="project-overlay">
                 <div className="project-overlay-links">
                   <a href="https://github.com/atul-kumar-30/Expense_Tracker" target="_blank" rel="noreferrer" className="proj-link">
