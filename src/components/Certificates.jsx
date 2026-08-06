@@ -2,7 +2,7 @@ import React from 'react';
 
 const Certificates = () => {
   return (
-    <section id="certificates" className="section section--alt">
+    <section id="certifications" className="section section--alt">
       <div className="container">
         <h2 className="section-title reveal">🏅 <span className="accent">Certifications</span></h2>
         <div className="certs-grid">

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Code2 } from 'lucide-react';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -64,9 +65,12 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`} id="navbar">
       <div className="nav-container">
-        <div className="nav-logo">⚡ Atul Kumar</div>
+        <div className="nav-logo" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <Code2 size={24} />
+          Atul Kumar
+        </div>
         <div className={`nav-menu ${menuActive ? 'active' : ''}`} id="nav-menu">
-          {['#home', '#about', '#skills', '#projects', '#certificates', '#education', '#timeline', '#contact'].map(id => (
+          {['#home', '#about', '#skills', '#projects', '#certifications', '#education', '#timeline', '#contact'].map(id => (
             <a
               key={id}
               style={{ cursor: 'pointer' }}

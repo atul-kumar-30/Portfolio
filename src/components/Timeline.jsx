@@ -1,147 +1,255 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
+
+const timelineItems = [
+  {
+    date: "2020",
+    icon: "🌱",
+    title: "Completed Class 10",
+    description: (
+      <>
+        Completed secondary education with a growing interest in{" "}
+        <strong>Science, Mathematics, and technology</strong>.
+      </>
+    ),
+  },
+  {
+    date: "2022",
+    icon: "📖",
+    title: "Completed Class 12 & Started B.Tech CSE",
+    description: (
+      <>
+        Completed senior secondary education and began pursuing{" "}
+        <strong>B.Tech in Computer Science and Engineering</strong> at Graphic
+        Era Hill University.
+      </>
+    ),
+  },
+  {
+    date: "2022 – 2024",
+    icon: "🧱",
+    title: "Programming & Core CS Foundations",
+    description: (
+      <>
+        Learned <strong>C, C++, and Java</strong> while developing strong
+        foundations in <strong>Data Structures and Algorithms, OOP, DBMS, OS,</strong>{" "}
+        and <strong>Computer Networks</strong>.
+      </>
+    ),
+  },
+  {
+    date: "Late 2024",
+    icon: "🎨",
+    title: "Web Development Foundations",
+    description: (
+      <>
+        Started building for the web by learning{" "}
+        <strong>HTML, CSS, and JavaScript</strong> to create responsive and
+        interactive user interfaces.
+      </>
+    ),
+  },
+  {
+    date: "Jul – Sep 2025",
+    icon: "🛠️",
+    title: "Core Development Projects",
+    description: (
+      <>
+        Built the{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Picoc-Interpreter">
+          PicoC Interpreter
+        </TimelineLink>
+        , a custom C-based interpreter, along with a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Dynamic-Weather-App">
+          Dynamic Weather App
+        </TimelineLink>{" "}
+        and{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Stopwatch-web-app">
+          Stopwatch
+        </TimelineLink>
+        . These projects strengthened my systems programming, problem-solving,
+        and frontend development skills.
+      </>
+    ),
+  },
+  {
+    date: "Late 2025",
+    icon: "☁️",
+    title: "AI Certification & Final-Year Project",
+    description: (
+      <>
+        Earned the{" "}
+        <strong>
+          Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
+        </strong>{" "}
+        certification and began working on my final-year deep learning project.
+      </>
+    ),
+  },
+  {
+    date: "2025 – 2026",
+    icon: "🧠",
+    title: "Deepfake Detection System",
+    description: (
+      <>
+        Developed a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Deepfake-Detection">
+          Deepfake Detection System
+        </TimelineLink>{" "}
+        using <strong>EfficientNet-B4 transfer learning, TensorFlow, MTCNN, OpenCV,</strong>{" "}
+        and <strong>Flask</strong> for image and video analysis.
+      </>
+    ),
+  },
+  {
+    date: "Feb – Mar 2026",
+    icon: "📊",
+    title: "Expense Tracker",
+    description: (
+      <>
+        Built a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Expense_Tracker">
+          full-stack expense tracking application
+        </TimelineLink>{" "}
+        with <strong>React, Supabase Authentication, PostgreSQL, real-time sync,</strong>{" "}
+        CRUD operations, and interactive spending analytics.
+      </>
+    ),
+  },
+  {
+    date: "May 2026",
+    icon: "🎓",
+    title: "Graduated B.Tech CSE",
+    description: (
+      <>
+        Successfully completed my{" "}
+        <strong>B.Tech in Computer Science and Engineering</strong> from Graphic
+        Era Hill University and began actively exploring entry-level software
+        engineering opportunities.
+      </>
+    ),
+  },
+  {
+    date: "Jul 2026",
+    icon: "🌍",
+    title: "Air Quality Predictor",
+    description: (
+      <>
+        Developed a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Air-Quality-Predictor">
+          full-stack machine learning application
+        </TimelineLink>{" "}
+        that combines live environmental data with a{" "}
+        <strong>Random Forest model</strong> to forecast PM2.5 levels using{" "}
+        <strong>React, FastAPI, SQLite, Leaflet,</strong> and{" "}
+        <strong>Chart.js</strong>.
+      </>
+    ),
+  },
+  {
+    date: "Jul 2026",
+    icon: "🎮",
+    title: "Ultimate Tic-Tac-Toe",
+    description: (
+      <>
+        Built a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/ultimate-tic-tac-toe-react">
+          real-time multiplayer game
+        </TimelineLink>{" "}
+        with dynamic <strong>3x3, 4x4, and 5x5 grids</strong>, Minimax-based AI,
+        ranked matchmaking, Blitz Mode, and persistent player profiles using{" "}
+        <strong>React, Supabase,</strong> and <strong>PostgreSQL</strong>.
+      </>
+    ),
+  },
+  {
+    date: "Late Jul 2026",
+    icon: "🪄",
+    title: "Full-Stack & AI Applications",
+    description: (
+      <>
+        Created two MERN applications: a{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/Project-Tracker">
+          Project Tracker
+        </TimelineLink>{" "}
+        with drag-and-drop Kanban boards and role-based access, and an{" "}
+        <TimelineLink href="https://github.com/atul-kumar-30/AI-Job-Tracker">
+          AI Job Tracker
+        </TimelineLink>{" "}
+        with JWT authentication, Gemini API integration, AI-generated cover
+        letters, and ATS resume scoring.
+      </>
+    ),
+  },
+];
+
+function TimelineLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="timeline-link"
+    >
+      <strong>{children}</strong>
+    </a>
+  );
+}
 
 const Timeline = () => {
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('reveal-tl');
-      });
-    }, { threshold: 0.2 });
+  const timelineRef = React.useRef(null);
 
-    document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+  useEffect(() => {
+    if (!timelineRef.current) return;
     
-    return () => observer.disconnect();
+    const items = timelineRef.current.querySelectorAll(".timeline-item");
+
+    if (!("IntersectionObserver" in window)) {
+      items.forEach((item) => item.classList.add("reveal-tl"));
+      return;
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("reveal-tl");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+
+    items.forEach((item) => observer.observe(item));
+
+    return () => {
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <section id="timeline" className="section section--alt">
       <div className="container">
-        <h2 className="section-title reveal">🗺️ My <span className="accent">Journey</span></h2>
-        <div className="timeline">
+        <h2 className="section-title reveal">
+          🗺️ My <span className="accent">Journey</span>
+        </h2>
 
-          <div className="timeline-item">
-            <div className="timeline-icon">🌱</div>
-            <div className="timeline-content">
-              <span className="timeline-date">2020</span>
-              <h3>Completed 10th Grade</h3>
-              <p>Graduated high school with a strong foundation in Science and Mathematics — the start of my tech journey.
-              </p>
-            </div>
-          </div>
+        <div className="timeline" ref={timelineRef}>
+          {timelineItems.map((item, index) => (
+            <article className="timeline-item" key={`${item.date}-${index}`}>
+              <div className="timeline-icon" aria-hidden="true">
+                {item.icon}
+              </div>
 
-          <div className="timeline-item">
-            <div className="timeline-icon">📖</div>
-            <div className="timeline-content">
-              <span className="timeline-date">2022</span>
-              <h3>Completed 12th Grade</h3>
-              <p>Finished senior secondary education and secured admission into B.Tech CSE, ready to dive deep into
-                Computer Science.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🧱</div>
-            <div className="timeline-content">
-              <span className="timeline-date">2022 – 2023</span>
-              <h3>Initial Phase: Foundations</h3>
-              <p>Mastered <strong>C and C++</strong>. Built a strong foundation in <strong>Data Structures & Algorithms
-                  (DSA)</strong> and <strong>Object-Oriented Programming (OOPs)</strong>.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🔬</div>
-            <div className="timeline-content">
-              <span className="timeline-date">2023 – 2024</span>
-              <h3>Advanced Algorithms & Core CS</h3>
-              <p>Learned <strong>Java</strong> and <strong>DAA (Design & Analysis of Algorithms)</strong>. Studied core
-                CS subjects: <strong>OS, DBMS, and Computer Networks (CN)</strong>.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🎨</div>
-            <div className="timeline-content">
-              <span className="timeline-date">Late 2024</span>
-              <h3>Web Development Foundations</h3>
-              <p>Transitioned into building for the web. Learned <strong>HTML, CSS, and JavaScript</strong> to create
-                responsive and interactive user interfaces.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🛠️</div>
-            <div className="timeline-content">
-              <span className="timeline-date">July 2025 – Sep 2025</span>
-              <h3>Core Development Projects</h3>
-              <p>Built the <a href="https://github.com/atul-kumar-30/Picoc-Interpreter" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Picoc Interpreter</strong></a> (a custom C-based engine), alongside a fully responsive <a href="https://github.com/atul-kumar-30/Dynamic-Weather-App" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Dynamic Weather App</strong></a> and a high-precision <a href="https://github.com/atul-kumar-30/Stopwatch-web-app" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Stopwatch</strong></a>. These projects strengthened my systems programming and modern frontend UI skills.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">☁️</div>
-            <div className="timeline-content">
-              <span className="timeline-date">Late 2025</span>
-              <h3>Oracle AI Certification & ML Research</h3>
-              <p>Earned the Oracle Cloud Infrastructure AI Foundations 2025 Associate certificate. Commenced work on my
-                Major Final Year Project.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🧠</div>
-            <div className="timeline-content">
-              <span className="timeline-date">2025 – 2026</span>
-              <h3>Final Year Project</h3>
-              <p>Developed a <a href="https://github.com/atul-kumar-30/Deepfake-Detection" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Deepfake Detection</strong></a> AI system to combat digital manipulation. Leveraging a custom CNN and MTCNN for precise face extraction, it accurately identifies fake high-resolution images and videos.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">📊</div>
-            <div className="timeline-content">
-              <span className="timeline-date">Feb 2026 – March 2026</span>
-              <h3>
-                <a href="https://github.com/atul-kumar-30/Expense_Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
-                  Modern Expense Tracker
-                </a>
-              </h3>
-              <p>Built a full-stack financial tool with React and Supabase, featuring secure authentication and
-                real-time data synchronization.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🎓</div>
-            <div className="timeline-content">
-              <span className="timeline-date">May 2026</span>
-              <h3>Graduated B.Tech CSE</h3>
-              <p>Successfully completed B.Tech in Computer Science & Engineering from GEHU. Actively seeking opportunities to contribute as a Software Engineer or AI/ML Engineer.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🌍</div>
-            <div className="timeline-content">
-              <span className="timeline-date">July 2026</span>
-              <h3>
-                <a href="https://github.com/atul-kumar-30/Air-Quality-Predictor" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none', transition: 'color 0.2s ease' }} onMouseEnter={(e) => e.target.style.color = 'var(--primary)'} onMouseLeave={(e) => e.target.style.color = 'inherit'}>
-                  Air Quality Predictor
-                </a>
-              </h3>
-              <p>Developed a machine learning-based web application capable of analyzing and predicting real-time Air Quality Indices (AQI) to promote environmental awareness.</p>
-            </div>
-          </div>
-
-          <div className="timeline-item">
-            <div className="timeline-icon">🪄</div>
-            <div className="timeline-content">
-              <span className="timeline-date">Late July 2026</span>
-              <h3>Full-Stack & AI Applications</h3>
-              <p>Created two robust MERN stack applications: a <a href="https://github.com/atul-kumar-30/Project-Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>Project Tracker</strong></a> featuring drag-and-drop Kanban boards and role-based access, and an <a href="https://github.com/atul-kumar-30/AI-Job-Tracker" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', textDecoration: 'none' }}><strong>AI Job Tracker</strong></a> that integrates the Gemini API for intelligent cover letter generation and ATS resume scoring.</p>
-            </div>
-          </div>
-
+              <div className="timeline-content">
+                <span className="timeline-date">{item.date}</span>
+                <h3>{item.title}</h3>
+                <p>{item.description}</p>
+              </div>
+            </article>
+          ))}
         </div>
       </div>
     </section>

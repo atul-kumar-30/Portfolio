@@ -48,7 +48,7 @@ const About = () => {
               <span className="stat-num" data-target="15">0</span><span className="stat-suffix">+</span>
               <span className="stat-label">Technologies</span>
             </div>
-            <div className="stat-card" onClick={() => document.getElementById('certificates')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Certifications">
+            <div className="stat-card" onClick={() => document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Certifications">
               <span className="stat-num" data-target="3">0</span><span className="stat-suffix"></span>
               <span className="stat-label">Certifications</span>
             </div>

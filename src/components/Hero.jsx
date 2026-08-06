@@ -60,7 +60,7 @@ const Hero = () => {
                     View
                   </a>
                   <a href="/Atul_Kumar_Resume.pdf" download className="btn btn--outline" style={{ padding: '8px 16px', fontSize: '0.9rem', minWidth: 'auto' }}>
-                    Download
+                    ⬇️ Download
                   </a>
                 </div>
               </div>
