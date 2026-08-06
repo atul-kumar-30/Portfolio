@@ -3,12 +3,12 @@ import React, { useEffect } from "react";
 const timelineItems = [
   {
     date: "2020",
-    icon: "🌱",
+    icon: "📚",
     title: "Completed Class 10",
     description: (
       <>
-        Completed secondary education with a growing interest in{" "}
-        <strong>Science, Mathematics, and technology</strong>.
+        Successfully completed secondary education while building a strong
+        academic foundation in <strong>Science and Mathematics</strong>.
       </>
     ),
   },
@@ -39,18 +39,18 @@ const timelineItems = [
   {
     date: "Late 2024",
     icon: "🎨",
-    title: "Web Development Foundations",
+    title: "Started Web Development",
     description: (
       <>
-        Started building for the web by learning{" "}
-        <strong>HTML, CSS, and JavaScript</strong> to create responsive and
-        interactive user interfaces.
+        Learned <strong>HTML, CSS, and JavaScript</strong>, building responsive
+        and interactive websites while laying the foundation for full-stack
+        development.
       </>
     ),
   },
   {
-    date: "Jul – Sep 2025",
-    icon: "🛠️",
+    date: "July 2026 – September 2025",
+    icon: "⚙️",
     title: "Core Development Projects",
     description: (
       <>
@@ -71,50 +71,40 @@ const timelineItems = [
       </>
     ),
   },
+
   {
-    date: "Late 2025",
-    icon: "☁️",
-    title: "AI Certification & Final-Year Project",
-    description: (
-      <>
-        Earned the{" "}
-        <strong>
-          Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate
-        </strong>{" "}
-        certification and began working on my final-year deep learning project.
-      </>
-    ),
-  },
-  {
-    date: "2025 – 2026",
+    date: "Oct 2025 – Apr 2026",
     icon: "🧠",
-    title: "Deepfake Detection System",
+    title: "Final Year Project – Deepfake Detection",
     description: (
       <>
         Developed a{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/Deepfake-Detection">
           Deepfake Detection System
         </TimelineLink>{" "}
-        using <strong>EfficientNet-B4 transfer learning, TensorFlow, MTCNN, OpenCV,</strong>{" "}
-        and <strong>Flask</strong> for image and video analysis.
+        using <strong>EfficientNet-B4, TensorFlow, MTCNN, OpenCV,</strong> and{" "}
+        <strong>Flask</strong> for image and video analysis as my final-year
+        project.
       </>
     ),
   },
   {
-    date: "Feb – Mar 2026",
+    date: "Feb 2026 – Mar 2026",
     icon: "📊",
-    title: "Expense Tracker",
+    title: "First Production Full-Stack Application",
     description: (
       <>
-        Built a{" "}
+        Built the{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/Expense_Tracker">
-          full-stack expense tracking application
+          Expense Tracker
         </TimelineLink>{" "}
-        with <strong>React, Supabase Authentication, PostgreSQL, real-time sync,</strong>{" "}
-        CRUD operations, and interactive spending analytics.
+        using <strong>React, Supabase, and PostgreSQL</strong>, implementing
+        authentication, CRUD operations, real-time synchronization, interactive
+        analytics, and responsive dashboard design.
       </>
     ),
   },
+
   {
     date: "May 2026",
     icon: "🎓",
@@ -129,54 +119,33 @@ const timelineItems = [
     ),
   },
   {
-    date: "Jul 2026",
-    icon: "🌍",
-    title: "Air Quality Predictor",
+    date: "June 2026 – August 2026",
+    icon: "🌐",
+    title: "Full-Stack, ML & AI Applications",
     description: (
       <>
-        Developed a{" "}
+        Expanded my development experience by building the{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/Air-Quality-Predictor">
-          full-stack machine learning application
-        </TimelineLink>{" "}
-        that combines live environmental data with a{" "}
-        <strong>Random Forest model</strong> to forecast PM2.5 levels using{" "}
-        <strong>React, FastAPI, SQLite, Leaflet,</strong> and{" "}
-        <strong>Chart.js</strong>.
-      </>
-    ),
-  },
-  {
-    date: "Jul 2026",
-    icon: "🎮",
-    title: "Ultimate Tic-Tac-Toe",
-    description: (
-      <>
-        Built a{" "}
+          Air Quality Predictor
+        </TimelineLink>
+        ,{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/ultimate-tic-tac-toe-react">
-          real-time multiplayer game
-        </TimelineLink>{" "}
-        with dynamic <strong>3x3, 4x4, and 5x5 grids</strong>, Minimax-based AI,
-        ranked matchmaking, Blitz Mode, and persistent player profiles using{" "}
-        <strong>React, Supabase,</strong> and <strong>PostgreSQL</strong>.
-      </>
-    ),
-  },
-  {
-    date: "Late Jul 2026",
-    icon: "🪄",
-    title: "Full-Stack & AI Applications",
-    description: (
-      <>
-        Created two MERN applications: a{" "}
+          Ultimate Tic-Tac-Toe
+        </TimelineLink>
+        ,{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/Project-Tracker">
           Project Tracker
-        </TimelineLink>{" "}
-        with drag-and-drop Kanban boards and role-based access, and an{" "}
+        </TimelineLink>
+        , and{" "}
         <TimelineLink href="https://github.com/atul-kumar-30/AI-Job-Tracker">
           AI Job Tracker
-        </TimelineLink>{" "}
-        with JWT authentication, Gemini API integration, AI-generated cover
-        letters, and ATS resume scoring.
+        </TimelineLink>
+        . These projects strengthened my experience with{" "}
+        <strong>
+          React, Node.js, Express.js, FastAPI, MongoDB, PostgreSQL, Supabase,
+          machine learning, and the Gemini API
+        </strong>
+        .
       </>
     ),
   },
