@@ -49,7 +49,7 @@ const timelineItems = [
     ),
   },
   {
-    date: "July 2025 - September 2026",
+    date: "July 2025 - September 2025",
     icon: "⚙️",
     title: "Core Development Projects",
     description: (
