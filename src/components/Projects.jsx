@@ -153,14 +153,12 @@ const Projects = () => {
         </div>
 
         <div className="projects-more">
-          <a
-            href="https://github.com/atul-kumar-30"
-            target="_blank"
-            rel="noreferrer"
+          <button
+            onClick={() => window.open('https://github.com/atul-kumar-30', '_blank', 'noreferrer')}
             className="btn btn--outline"
           >
             View More on GitHub
-          </a>
+          </button>
         </div>
       </div>
     </section>

@@ -154,9 +154,8 @@ const timelineItems = [
 function TimelineLink({ href, children }) {
   return (
     <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+      href="#"
+      onClick={(e) => { e.preventDefault(); window.open(href, '_blank', 'noreferrer'); }}
       className="timeline-link"
     >
       <strong>{children}</strong>

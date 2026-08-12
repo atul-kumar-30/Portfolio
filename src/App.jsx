@@ -20,8 +20,8 @@ function App() {
       const target = document.getElementById(id);
       const navbar = document.getElementById('navbar');
       if (target && navbar) {
-        setTimeout(() => {
-          const offset = navbar.offsetHeight + 10;
+      setTimeout(() => {
+          const offset = navbar.offsetHeight - 60;
           window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
         }, 150);
       }
@@ -66,6 +66,46 @@ function App() {
     return () => {
       observer.disconnect();
       cardObserver.disconnect();
+    };
+  }, []);
+
+  // 3D mouse-tilt effect for all cards
+  useEffect(() => {
+    const SELECTORS = [
+      '.skill-category',
+      '.highlight-card', '.quick-info-card',
+    ];
+    const MAX_TILT = 12;
+
+    const applyTilt = (e) => {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      const dx = (e.clientX - (rect.left + rect.width  / 2)) / (rect.width  / 2);
+      const dy = (e.clientY - (rect.top  + rect.height / 2)) / (rect.height / 2);
+      card.style.transition = 'transform 0.1s ease';
+      card.style.transform  = `perspective(800px) rotateX(${-dy * MAX_TILT}deg) rotateY(${dx * MAX_TILT}deg) translateZ(10px)`;
+    };
+
+    const resetTilt = (e) => {
+      e.currentTarget.style.transition = 'transform 0.5s ease';
+      e.currentTarget.style.transform  = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
+    };
+
+    const cards = [];
+    SELECTORS.forEach(sel => {
+      document.querySelectorAll(sel).forEach(card => {
+        card.classList.add('tilt-card');
+        card.addEventListener('mousemove',  applyTilt);
+        card.addEventListener('mouseleave', resetTilt);
+        cards.push(card);
+      });
+    });
+
+    return () => {
+      cards.forEach(card => {
+        card.removeEventListener('mousemove',  applyTilt);
+        card.removeEventListener('mouseleave', resetTilt);
+      });
     };
   }, []);
 

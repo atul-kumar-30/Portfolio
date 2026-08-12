@@ -28,6 +28,11 @@ html {
   font-size: 16px;
 }
 
+@keyframes akFadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: var(--bg);
@@ -530,7 +535,13 @@ a {
   color: var(--text-dim);
   font-size: 0.85rem;
   font-weight: 500;
+  font-family: 'Poppins', sans-serif;
   transition: var(--transition);
+  cursor: pointer;
+  text-decoration: none;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .social-icon svg {
@@ -550,6 +561,23 @@ a {
   color: #0077b5;
   background: rgba(0, 119, 181, 0.1);
   transform: translateY(-3px);
+}
+
+.social-icon.gmail:hover {
+  border-color: #ea4335;
+  color: #ea4335;
+  background: rgba(234, 67, 53, 0.1);
+  transform: translateY(-3px);
+}
+
+.social-icon.location {
+  cursor: default;
+  color: var(--text-dim);
+}
+
+.social-icon.location svg {
+  color: #a78bfa;
+  flex-shrink: 0;
 }
 
 /* Monogram Visual */
@@ -767,6 +795,18 @@ a {
   transform: translateY(-6px);
   border-color: var(--primary);
   box-shadow: 0 15px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* ===== GLOBAL 3D CARD TILT ===== */
+/* Applied via JS to project-card, cert-card, skill-category, highlight-card */
+.tilt-card {
+  transform-style: preserve-3d;
+  will-change: transform;
+  transition: box-shadow 0.3s ease;
+}
+
+.tilt-card:hover {
+  box-shadow: 0 20px 60px rgba(59, 130, 246, 0.25), 0 0 0 1px rgba(59, 130, 246, 0.2);
 }
 
 .highlight-icon {
@@ -1158,21 +1198,50 @@ a {
   gap: 2rem;
 }
 
-.cert-card {
-  background: var(--glass);
-  border: 1px solid var(--glass-border);
-  border-radius: var(--radius);
-  padding: 2rem;
-  text-align: left;
-  transition: var(--transition);
-  display: flex;
-  flex-direction: column;
+/* ── Flip card wrapper ── */
+.cert-flip-wrapper {
+  perspective: 1000px;
+  cursor: pointer;
+  min-height: 320px;
 }
 
-.cert-card:hover {
-  transform: translateY(-8px);
+.cert-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+  transform-style: preserve-3d;
+  transition: transform 0.65s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+
+.cert-flip-inner.flipped {
+  transform: rotateY(180deg);
+}
+
+/* ── Shared face styles ── */
+.cert-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  border-radius: var(--radius);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cert-flip-wrapper:hover .cert-face {
   border-color: var(--primary);
-  box-shadow: 0 15px 40px rgba(59, 130, 246, 0.1);
+  box-shadow: 0 16px 40px rgba(59, 130, 246, 0.15);
+}
+
+/* ── Front ── */
+.cert-front {
+  transform: rotateY(0deg);
 }
 
 .cert-icon {
@@ -1180,7 +1249,7 @@ a {
   margin-bottom: 1rem;
 }
 
-.cert-card h3 {
+.cert-front h3 {
   font-size: 1rem;
   font-weight: 700;
   margin-bottom: 0.4rem;
@@ -1198,8 +1267,66 @@ a {
   color: var(--text-dim);
   font-size: 0.88rem;
   line-height: 1.6;
-  margin-bottom: 1.5rem;
   flex: 1;
+  margin-bottom: 1rem;
+}
+
+.cert-flip-hint {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  opacity: 0.6;
+  margin-top: auto;
+  letter-spacing: 0.5px;
+}
+
+/* ── Back ── */
+.cert-back {
+  transform: rotateY(180deg);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(59,130,246,0.08), rgba(139,92,246,0.08));
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.cert-back-badge {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 16px rgba(59,130,246,0.5));
+}
+
+.cert-back-title {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  line-height: 1.4;
+}
+
+.cert-back-org {
+  color: var(--primary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.cert-credential-btn {
+  font-size: 0.9rem;
+  padding: 0.7rem 1.6rem;
+  cursor: pointer;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* legacy — keep for tilt effect compatibility */
+.cert-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius);
+  padding: 2rem;
+  text-align: left;
+  transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 /* ===== EDUCATION ===== */
@@ -1448,6 +1575,59 @@ a {
   color: var(--text-dim);
   line-height: 1.8;
   margin-bottom: 2rem;
+}
+
+/* Quick Info Cards */
+.quick-info-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.quick-info-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1.1rem;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.quick-info-card:hover {
+  border-color: var(--primary);
+  background: rgba(59, 130, 246, 0.06);
+  transform: translateX(4px);
+}
+
+.quick-info-icon {
+  font-size: 1.4rem;
+  width: 42px;
+  height: 42px;
+  background: rgba(59, 130, 246, 0.1);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.quick-info-label {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-dim);
+  font-weight: 700;
+  margin-bottom: 0.15rem;
+}
+
+.quick-info-value {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
 }
 
 .contact-details {
@@ -1899,4 +2079,3 @@ a.contact-value:hover {
   color: #22c55e;
   text-shadow: 0 0 12px rgba(34, 197, 94, 0.4);
 }
-

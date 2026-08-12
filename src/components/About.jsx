@@ -3,6 +3,15 @@ import React, { useEffect, useRef } from 'react';
 const About = () => {
   const statsRef = useRef(null);
 
+  const scrollTo = (id) => {
+    const target = document.getElementById(id);
+    const navbar = document.getElementById('navbar');
+    if (target && navbar) {
+      const offset = navbar.offsetHeight - 60;
+      window.scrollTo({ top: target.offsetTop - offset, behavior: 'smooth' });
+    }
+  };
+
   useEffect(() => {
     const statNums = document.querySelectorAll('.stat-num');
     const observer = new IntersectionObserver((entries) => {
@@ -36,19 +45,19 @@ const About = () => {
           </p>
 
           <div className="stats-grid" ref={statsRef}>
-            <div className="stat-card" onClick={() => document.getElementById('education')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Education">
-              <span className="stat-num" data-target="4">0</span><span className="stat-suffix"></span>
-              <span className="stat-label">Years of Study</span>
+            <div className="stat-card" onClick={() => scrollTo('education')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
+              <span className="stat-num" data-target="4">0</span><span className="stat-suffix">+</span>
+              <span className="stat-label">Years of Coding</span>
             </div>
-            <div className="stat-card" onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Projects">
+            <div className="stat-card" onClick={() => scrollTo('projects')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="7">0</span><span className="stat-suffix">+</span>
               <span className="stat-label">Projects Built</span>
             </div>
-            <div className="stat-card" onClick={() => document.getElementById('skills')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Technologies">
+            <div className="stat-card" onClick={() => scrollTo('skills')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="15">0</span><span className="stat-suffix">+</span>
               <span className="stat-label">Technologies</span>
             </div>
-            <div className="stat-card" onClick={() => document.getElementById('certifications')?.scrollIntoView({ behavior: 'smooth' })} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'} title="Click to view Certifications">
+            <div className="stat-card" onClick={() => scrollTo('certifications')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="3">0</span><span className="stat-suffix"></span>
               <span className="stat-label">Certifications</span>
             </div>
