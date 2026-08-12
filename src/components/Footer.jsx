@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowUp } from 'lucide-react';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -11,7 +12,7 @@ const Footer = () => {
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <p style={{ color: 'var(--text-dim)', fontSize: '0.9rem', margin: 0 }}>© {new Date().getFullYear()} Atul Kumar. All rights reserved.</p>
           <button onClick={scrollToTop} style={{ background: 'var(--glass)', border: '1px solid var(--glass-border)', color: 'var(--text)', padding: '0.5rem 1.2rem', borderRadius: '50px', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '0.5rem', fontWeight: 600, fontSize: '0.9rem', backdropFilter: 'blur(10px)' }}>
-            Back to Top ⬆️
+            Back to Top <ArrowUp size={16} />
           </button>
         </div>
       </div>

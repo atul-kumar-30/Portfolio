@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
+import { Route, BookOpen, Code2, Globe, Cpu, BrainCircuit, ChartNoAxesCombined, GraduationCap, Rocket, School } from 'lucide-react';
 
 const timelineItems = [
   {
     date: "2020",
-    icon: "📚",
+    icon: BookOpen,
     title: "Completed Class 10",
     description: (
       <>
@@ -14,7 +15,7 @@ const timelineItems = [
   },
   {
     date: "2022",
-    icon: "📖",
+    icon: School,
     title: "Completed Class 12 & Started B.Tech CSE",
     description: (
       <>
@@ -26,7 +27,7 @@ const timelineItems = [
   },
   {
     date: "2022 – 2024",
-    icon: "🧱",
+    icon: Code2,
     title: "Programming & Core CS Foundations",
     description: (
       <>
@@ -38,7 +39,7 @@ const timelineItems = [
   },
   {
     date: "Late 2024",
-    icon: "🎨",
+    icon: Globe,
     title: "Started Web Development",
     description: (
       <>
@@ -50,7 +51,7 @@ const timelineItems = [
   },
   {
     date: "July 2025 - September 2025",
-    icon: "⚙️",
+    icon: Cpu,
     title: "Core Development Projects",
     description: (
       <>
@@ -74,7 +75,7 @@ const timelineItems = [
 
   {
     date: "Oct 2025 – Apr 2026",
-    icon: "🧠",
+    icon: BrainCircuit,
     title: "Final Year Project – Deepfake Detection",
     description: (
       <>
@@ -90,7 +91,7 @@ const timelineItems = [
   },
   {
     date: "Feb 2026 – Mar 2026",
-    icon: "📊",
+    icon: ChartNoAxesCombined,
     title: "First Production Full-Stack Application",
     description: (
       <>
@@ -107,7 +108,7 @@ const timelineItems = [
 
   {
     date: "May 2026",
-    icon: "🎓",
+    icon: GraduationCap,
     title: "Graduated B.Tech CSE",
     description: (
       <>
@@ -120,7 +121,7 @@ const timelineItems = [
   },
   {
     date: "June 2026 – August 2026",
-    icon: "🌐",
+    icon: Rocket,
     title: "Full-Stack, ML & AI Applications",
     description: (
       <>
@@ -201,14 +202,16 @@ const Timeline = () => {
     <section id="timeline" className="section section--alt">
       <div className="container">
         <h2 className="section-title reveal">
-          🗺️ My <span className="accent">Journey</span>
+          <Route className="section-icon" /> My <span className="accent">Journey</span>
         </h2>
 
         <div className="timeline" ref={timelineRef}>
           {timelineItems.map((item, index) => (
             <article className="timeline-item" key={`${item.date}-${index}`}>
               <div className="timeline-icon" aria-hidden="true">
-                {item.icon}
+                <div className="timeline-icon-wrapper">
+                  <item.icon />
+                </div>
               </div>
 
               <div className="timeline-content">

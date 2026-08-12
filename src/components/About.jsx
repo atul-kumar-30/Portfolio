@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { UserRound, Code2, FolderCode, Blocks, Award } from 'lucide-react';
 
 const About = () => {
   const statsRef = useRef(null);
@@ -38,7 +39,7 @@ const About = () => {
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2 className="section-title reveal">👨‍💻 <span className="accent">About</span> Me</h2>
+        <h2 className="section-title reveal"><UserRound className="section-icon" /> <span className="accent">About</span> Me</h2>
         <div className="about-content">
           <p className="about-desc reveal">
             I'm Atul Kumar, a recent <strong>B.Tech CSE</strong> graduate from Graphic Era Hill University. I specialize in building full-stack applications, integrating <strong>AI/ML systems</strong>, working with databases and authentication, and implementing real-time features. I am passionate about software engineering and eager to contribute to a team where technology creates a real impact.
@@ -47,19 +48,19 @@ const About = () => {
           <div className="stats-grid" ref={statsRef}>
             <div className="stat-card" onClick={() => scrollTo('education')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="4">0</span><span className="stat-suffix">+</span>
-              <span className="stat-label">Years of Coding</span>
+              <span className="stat-label"><Code2 className="card-icon" />Years of Coding</span>
             </div>
             <div className="stat-card" onClick={() => scrollTo('projects')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="7">0</span><span className="stat-suffix">+</span>
-              <span className="stat-label">Projects Built</span>
+              <span className="stat-label"><FolderCode className="card-icon" />Projects Built</span>
             </div>
             <div className="stat-card" onClick={() => scrollTo('skills')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
               <span className="stat-num" data-target="15">0</span><span className="stat-suffix">+</span>
-              <span className="stat-label">Technologies</span>
+              <span className="stat-label"><Blocks className="card-icon" />Technologies</span>
             </div>
             <div className="stat-card" onClick={() => scrollTo('certifications')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>
-              <span className="stat-num" data-target="3">0</span><span className="stat-suffix"></span>
-              <span className="stat-label">Certifications</span>
+              <span className="stat-num" data-target="3">0</span><span className="stat-suffix">+</span>
+              <span className="stat-label"><Award className="card-icon" />Certifications</span>
             </div>
           </div>
         </div>

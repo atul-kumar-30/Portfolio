@@ -12,6 +12,15 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 
 function App() {
+  const [appReady, setAppReady] = useState(false);
+  const [hideLoader, setHideLoader] = useState(false);
+
+  useEffect(() => {
+    if (appReady) {
+      const timer = setTimeout(() => setHideLoader(true), 800);
+      return () => clearTimeout(timer);
+    }
+  }, [appReady]);
   useEffect(() => {
     // Handle initial load if someone visits a direct link like /skills
     const path = window.location.pathname;
@@ -69,51 +78,19 @@ function App() {
     };
   }, []);
 
-  // 3D mouse-tilt effect for all cards
-  useEffect(() => {
-    const SELECTORS = [
-      '.skill-category',
-      '.highlight-card', '.quick-info-card',
-    ];
-    const MAX_TILT = 12;
-
-    const applyTilt = (e) => {
-      const card = e.currentTarget;
-      const rect = card.getBoundingClientRect();
-      const dx = (e.clientX - (rect.left + rect.width  / 2)) / (rect.width  / 2);
-      const dy = (e.clientY - (rect.top  + rect.height / 2)) / (rect.height / 2);
-      card.style.transition = 'transform 0.1s ease';
-      card.style.transform  = `perspective(800px) rotateX(${-dy * MAX_TILT}deg) rotateY(${dx * MAX_TILT}deg) translateZ(10px)`;
-    };
-
-    const resetTilt = (e) => {
-      e.currentTarget.style.transition = 'transform 0.5s ease';
-      e.currentTarget.style.transform  = 'perspective(800px) rotateX(0deg) rotateY(0deg) translateZ(0)';
-    };
-
-    const cards = [];
-    SELECTORS.forEach(sel => {
-      document.querySelectorAll(sel).forEach(card => {
-        card.classList.add('tilt-card');
-        card.addEventListener('mousemove',  applyTilt);
-        card.addEventListener('mouseleave', resetTilt);
-        cards.push(card);
-      });
-    });
-
-    return () => {
-      cards.forEach(card => {
-        card.removeEventListener('mousemove',  applyTilt);
-        card.removeEventListener('mouseleave', resetTilt);
-      });
-    };
-  }, []);
-
   return (
     <>
+      {!hideLoader && (
+        <div className={`global-loader ${appReady ? 'fade-out' : ''}`}>
+          <div className="loader-content">
+            <div className="loader-logo">AK</div>
+            <div className="loader-bar"><div className="loader-progress"></div></div>
+          </div>
+        </div>
+      )}
       <AnimatedBackground />
       <Navbar />
-      <Hero />
+      <Hero onReady={() => setAppReady(true)} />
       <About />
       <Skills />
       <Projects />

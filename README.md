@@ -8,14 +8,16 @@ This portfolio showcases my skills as a Software Engineer, featuring my technica
 
 [View Live Portfolio](https://portfolio-atul-kumar.vercel.app/) *(Hosted on Vercel)*
 
-## 🛠️ Built With
+## 🛠️ Tech Stack
 
-*   **Frontend Framework:** [React.js](https://react.dev/)
-*   **Build Tool:** [Vite](https://vitejs.dev/)
-*   **3D Graphics:** [Three.js](https://threejs.org/) + [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber) + [@react-three/drei](https://github.com/pmndrs/drei)
-*   **Styling:** Vanilla CSS3 (Custom Design System, Glassmorphism, Dark Mode)
-*   **Animations:** Custom CSS Animations, Keyframes, IntersectionObserver (React Hooks)
-*   **Deployment:** Vercel (with custom `vercel.json` routing configuration)
+| Category | Technologies |
+| :--- | :--- |
+| 🎨 **Frontend Framework** | [React.js](https://react.dev/) |
+| ⚡ **Build Tool** | [Vite](https://vitejs.dev/) |
+| 🌌 **3D Graphics** | [Three.js](https://threejs.org/), [@react-three/fiber](https://docs.pmnd.rs/react-three-fiber), [@react-three/drei](https://github.com/pmndrs/drei) |
+| 💅 **Styling** | Vanilla CSS3 (Custom Design System, Glassmorphism, Dark Mode) |
+| 🎬 **Animations** | Custom CSS Animations, Keyframes, IntersectionObserver (React Hooks) |
+| 🚀 **Deployment** | Vercel (with custom `vercel.json` routing configuration) |
 
 ## ✨ Key Features
 
@@ -26,8 +28,8 @@ This portfolio showcases my skills as a Software Engineer, featuring my technica
 *   **Interactive Stats:** Clickable stat cards in the About section (4+ Years of Coding, 7+ Projects Built, 15+ Technologies, 3 Certifications) that smoothly scroll to the relevant section.
 *   **Interactive UI & Typography:** Smooth scroll reveals, uppercase navigation styling, dynamic typing animations, automatic stat counters, and a responsive mobile hamburger menu.
 *   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, Air Quality Predictor, and AI Job Tracker.
-*   **Modern Aesthetic:** Deep space dark theme, Tron-inspired 3D grid background, and glassmorphism card styling.
-*   **Advanced Contact Form:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI (Recruiter / Developer / Student / Other).
+*   **Modern 2.5D Aesthetic:** Deep space dark theme, Tron-inspired 3D grid background, and sleek layered glassmorphism cards with dynamic 3D mouse tracking.
+*   **Advanced Contact Section:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI and direct social integrations including a one-click Gmail composer.
 *   **No Status Bar Leaks:** All external links use `<button>` elements to prevent browser URL preview in the status bar on hover.
 
 ## 💻 Running Locally

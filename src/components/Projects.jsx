@@ -1,20 +1,16 @@
 import React from "react";
+import { FolderCode, WalletCards, ScanFace, Wind, BriefcaseBusiness, ExternalLink } from 'lucide-react';
 
 const GitHubIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="btn-icon" style={{ marginRight: '6px' }}>
     <path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A10.52 10.52 0 0 1 12 6.845a10.55 10.55 0 0 1 3.006.404c2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.839 24 17.342 24 12 24 5.373 18.627 0 12 0z" />
-  </svg>
-);
-
-const ViewIcon = () => (
-  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-    <path d="M21.88 2.16a1 1 0 0 0-1-.16l-14 5a1 1 0 0 0-.56 1.45l3.85 6.67 1.88 5.65a1 1 0 0 0 .9.68 1 1 0 0 0 .32-.05l6-2a1 1 0 0 0 .64-1.2l-2-6 4.64-8.08a1 1 0 0 0-.67-1.96z" />
   </svg>
 );
 
 const projects = [
   {
-    title: "💰 Expense Tracker",
+    title: "Expense Tracker",
+    icon: WalletCards,
     image: "/Expense_Tracker.png",
     alt: "Expense Tracker dashboard",
     github: "https://github.com/atul-kumar-30/Expense_Tracker",
@@ -30,7 +26,8 @@ const projects = [
     ],
   },
   {
-    title: "🧠 Deepfake Detection",
+    title: "Deepfake Detection",
+    icon: ScanFace,
     image: "/Deepfake_Detection.png",
     alt: "Deepfake Detection System dashboard",
     github: "https://github.com/atul-kumar-30/Deepfake-Detection",
@@ -47,7 +44,8 @@ const projects = [
     ],
   },
   {
-    title: "🌍 Air Quality Predictor",
+    title: "Air Quality Predictor",
+    icon: Wind,
     image: "/Air_Quality_predictor.png",
     alt: "Air Quality Predictor dashboard",
     imageClass: "project-screenshot--air",
@@ -64,7 +62,8 @@ const projects = [
     ],
   },
   {
-    title: "🤖 AI Job Tracker",
+    title: "AI Job Tracker",
+    icon: BriefcaseBusiness,
     image: "/AI_Job_Tracker.png",
     alt: "AI Job Tracker applications pipeline",
     github: "https://github.com/atul-kumar-30/AI-Job-Tracker",
@@ -115,7 +114,7 @@ const ProjectCard = ({ project }) => {
                 onClick={() => openLink(project.live)}
                 aria-label={`Open ${project.title} live application`}
               >
-                <ViewIcon />
+                <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} />
                 View App
               </button>
             )}
@@ -124,7 +123,7 @@ const ProjectCard = ({ project }) => {
       </div>
 
       <div className="project-body">
-        <h3>{project.title}</h3>
+        <h3><project.icon className="card-icon" style={{ marginRight: '8px' }} /> {project.title}</h3>
 
         <p>{project.description}</p>
 
@@ -143,7 +142,7 @@ const Projects = () => {
     <section id="projects" className="section">
       <div className="container">
         <h2 className="section-title reveal">
-          🚀 <span className="accent">Main</span> Projects
+          <FolderCode className="section-icon" /> <span className="accent">Main</span> Projects
         </h2>
 
         <div className="projects-grid">

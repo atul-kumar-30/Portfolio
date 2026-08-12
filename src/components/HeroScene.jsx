@@ -1,7 +1,20 @@
-import React, { useRef, useMemo } from 'react';
+import React, { useRef, useMemo, useState } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Float } from '@react-three/drei';
 import * as THREE from 'three';
+
+function ReadyNotifier({ onReady }) {
+  React.useEffect(() => {
+    if (onReady) {
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          onReady();
+        });
+      });
+    }
+  }, [onReady]);
+  return null;
+}
 
 /* ─── Orbit ring of dots ───────────────────────────────────── */
 function OrbitRing({ count, radius, speed, color, tiltZ = 0 }) {
@@ -118,40 +131,35 @@ function Scene() {
 }
 
 /* ─── Main export ─────────────────────────────────────────────  */
-const HeroScene = () => (
-  <div style={{ position: 'relative', width: '440px', height: '440px' }}>
-    <Canvas
-      camera={{ position: [0, 0, 8], fov: 65 }}
-      gl={{ antialias: true, alpha: true }}
-      style={{ background: 'transparent', width: '100%', height: '100%' }}
-      dpr={[1, 2]}
-    >
-      <Scene />
-    </Canvas>
+const HeroScene = ({ onReady }) => {
+  return (
+    <div style={{ position: 'relative', width: '440px', height: '440px' }}>
+      
+      <Canvas
+        camera={{ position: [0, 0, 8], fov: 65 }}
+        gl={{ antialias: true, alpha: true }}
+        style={{ background: 'transparent', width: '100%', height: '100%', zIndex: 0 }}
+        dpr={[1, 2]}
+      >
+        <Scene />
+        <ReadyNotifier onReady={onReady} />
+      </Canvas>
 
-    {/* AK initials — fade in after WebGL scene renders */}
-    <div
-      style={{
-        position: 'absolute',
-        top: '50%',
-        left: '50%',
-        transform: 'translate(-50%, -50%)',
-        fontFamily: "'Poppins', sans-serif",
-        fontSize: '2.2rem',
-        fontWeight: '800',
-        background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
-        backgroundClip: 'text',
-        WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent',
-        letterSpacing: '4px',
-        pointerEvents: 'none',
-        userSelect: 'none',
-        filter: 'drop-shadow(0 0 14px rgba(59,130,246,0.7))',
-      }}
-    >
-      AK
+      {/* AK initials - HTML Overlay, always visible instantly */}
+      <div
+        style={{
+          position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)',
+          fontFamily: "'Poppins', sans-serif", fontSize: '2.2rem', fontWeight: '800',
+          background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)', backgroundClip: 'text',
+          WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', letterSpacing: '4px',
+          pointerEvents: 'none', userSelect: 'none', filter: 'drop-shadow(0 0 14px rgba(59,130,246,0.7))',
+          zIndex: 2, marginRight: '-4px'
+        }}
+      >
+        AK
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default HeroScene;

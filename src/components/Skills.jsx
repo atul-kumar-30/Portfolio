@@ -1,39 +1,70 @@
-import React from 'react';
-import skillsIcon from '../assets/skills-icon.png';
+import React, { useEffect } from 'react';
+import { Layers3, BrainCircuit, Terminal, Globe, Wrench } from 'lucide-react';
 
 const Skills = () => {
+  useEffect(() => {
+    const cards = document.querySelectorAll('.skill-category');
+    const MAX_TILT = 12;
+
+    const applyTilt = (e) => {
+      const card = e.currentTarget;
+      const rect = card.getBoundingClientRect();
+      const dx = (e.clientX - (rect.left + rect.width / 2)) / (rect.width / 2);
+      const dy = (e.clientY - (rect.top + rect.height / 2)) / (rect.height / 2);
+      
+      card.style.transition = 'transform 0.1s ease, box-shadow 0.1s ease';
+      card.style.transform = `perspective(800px) rotateX(${-dy * MAX_TILT}deg) rotateY(${dx * MAX_TILT}deg) translateZ(10px)`;
+    };
+
+    const resetTilt = (e) => {
+      e.currentTarget.style.transition = 'transform 0.5s ease, box-shadow 0.5s ease';
+      e.currentTarget.style.transform = '';
+    };
+
+    cards.forEach(card => {
+      card.addEventListener('mousemove', applyTilt);
+      card.addEventListener('mouseleave', resetTilt);
+    });
+
+    return () => {
+      cards.forEach(card => {
+        card.removeEventListener('mousemove', applyTilt);
+        card.removeEventListener('mouseleave', resetTilt);
+      });
+    };
+  }, []);
+
   return (
     <section id="skills" className="section section--alt">
       <div className="container">
         <h2 className="section-title reveal">
-          <img 
-            src={skillsIcon} 
-            alt="Skills Icon" 
-            style={{ width: '1.2em', height: '1.2em', verticalAlign: 'middle', marginRight: '0.3em', transform: 'translateY(-4px)' }} 
-          />
+          <Layers3 className="section-icon" />
           <span className="accent">Technical</span> Skills
         </h2>
         <div className="skills-grid">
           <div className="skill-category">
             <div className="skill-cat-header">
-              <span className="skill-cat-icon">🤖</span>
-              <h3>AI & Machine Learning</h3>
+              <BrainCircuit className="card-icon" />
+              <h3>AI, ML & Generative AI</h3>
             </div>
             <div className="skill-tags">
-              <span className="skill-tag">Python</span>
               <span className="skill-tag">TensorFlow</span>
               <span className="skill-tag">Keras</span>
               <span className="skill-tag">Scikit-learn</span>
+              <span className="skill-tag">NLTK</span>
               <span className="skill-tag">OpenCV</span>
               <span className="skill-tag">NumPy</span>
               <span className="skill-tag">Pandas</span>
-              <span className="skill-tag">NLTK</span>
               <span className="skill-tag">Gemini API</span>
+              <span className="skill-tag">RAG</span>
+              <span className="skill-tag">LangGraph</span>
+              <span className="skill-tag">LangChain</span>
+              <span className="skill-tag">Embeddings</span>
             </div>
           </div>
           <div className="skill-category">
             <div className="skill-cat-header">
-              <span className="skill-cat-icon">💻</span>
+              <Terminal className="card-icon" />
               <h3>Programming Languages</h3>
             </div>
             <div className="skill-tags">
@@ -42,12 +73,13 @@ const Skills = () => {
               <span className="skill-tag">Java</span>
               <span className="skill-tag">Python</span>
               <span className="skill-tag">JavaScript</span>
+              <span className="skill-tag">TypeScript</span>
               <span className="skill-tag">SQL</span>
             </div>
           </div>
           <div className="skill-category">
             <div className="skill-cat-header">
-              <span className="skill-cat-icon">🌐</span>
+              <Globe className="card-icon" />
               <h3>Web Development</h3>
             </div>
             <div className="skill-tags">
@@ -60,11 +92,13 @@ const Skills = () => {
               <span className="skill-tag">Flask</span>
               <span className="skill-tag">FastAPI</span>
               <span className="skill-tag">REST APIs</span>
+              <span className="skill-tag">JWT</span>
+              <span className="skill-tag">SQLAlchemy</span>
             </div>
           </div>
           <div className="skill-category">
             <div className="skill-cat-header">
-              <span className="skill-cat-icon">🛠️</span>
+              <Wrench className="card-icon" />
               <h3>Tools, Cloud & Databases</h3>
             </div>
             <div className="skill-tags">
@@ -78,6 +112,7 @@ const Skills = () => {
               <span className="skill-tag">SQLite</span>
               <span className="skill-tag">Supabase</span>
               <span className="skill-tag">Docker</span>
+              <span className="skill-tag">pgvector</span>
               <span className="skill-tag">JupyterLab</span>
               <span className="skill-tag">Google Colab</span>
             </div>
