@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { UserRound, Code2, FolderCode, Blocks, Award } from 'lucide-react';
+import { UserRound, Code2, FolderCode, Blocks, Award, Terminal } from 'lucide-react';
 
 const About = () => {
   const statsRef = useRef(null);
@@ -41,9 +41,54 @@ const About = () => {
       <div className="container">
         <h2 className="section-title reveal"><UserRound className="section-icon" /> <span className="accent">About</span> Me</h2>
         <div className="about-content">
-          <p className="about-desc reveal">
-            I'm Atul Kumar, a recent <strong>B.Tech CSE</strong> graduate from Graphic Era Hill University. I specialize in building full-stack applications, integrating <strong>AI/ML systems</strong>, working with databases and authentication, and implementing real-time features. I am passionate about software engineering and eager to contribute to a team where technology creates a real impact.
-          </p>
+          <div className="about-glass-box reveal" style={{ 
+            display: 'flex', 
+            flexWrap: 'wrap',
+            gap: '3rem', 
+            background: 'var(--glass)', 
+            border: `1px solid var(--glass-border)`, 
+            borderRadius: 'var(--radius)', 
+            padding: '3rem',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: '4rem',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 20px 40px rgba(0,0,0,0.2)'
+          }}>
+            {/* Avatar Placeholder */}
+            <div className="about-avatar" style={{
+              width: '180px',
+              height: '180px',
+              borderRadius: '50%',
+              background: 'linear-gradient(45deg, #3b82f6, #8b5cf6, #ec4899)',
+              padding: '5px',
+              flexShrink: 0,
+              boxShadow: '0 0 30px rgba(139, 92, 246, 0.4)'
+            }}>
+              <div style={{
+                width: '100%',
+                height: '100%',
+                borderRadius: '50%',
+                background: '#0b0020',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                fontSize: '4.5rem',
+                fontWeight: 'bold',
+                color: '#fff',
+                fontFamily: 'sans-serif'
+              }}>
+                AK
+              </div>
+            </div>
+
+            {/* Text Area */}
+            <div style={{ flex: '1 1 400px', textAlign: 'left' }}>
+              <p className="about-desc" style={{ margin: 0, textAlign: 'left', fontSize: '1.15rem', lineHeight: '1.8', maxWidth: '100%' }}>
+                I'm a recent <strong>B.Tech CSE</strong> graduate from Graphic Era Hill University. I specialize in building full-stack applications, integrating <strong>AI/ML systems</strong>, working with databases and authentication, and implementing real-time features. I am passionate about software engineering and eager to contribute to a team where technology creates a real impact.
+              </p>
+            </div>
+          </div>
 
           <div className="stats-grid" ref={statsRef}>
             <div className="stat-card" onClick={() => scrollTo('education')} style={{ cursor: 'pointer', transition: 'transform 0.2s ease' }} onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.05)'} onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}>

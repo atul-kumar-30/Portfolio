@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import HeroScene from './HeroScene';
-import { FileText, Eye, Download, ChevronDown } from 'lucide-react';
+import { FileText, Eye, Download, ChevronDown, FolderCode } from 'lucide-react';
 
 
 
@@ -56,23 +56,53 @@ const Hero = ({ onReady }) => {
             <p className="hero-typing">
               <span id="typing-text" ref={typingRef}></span><span className="cursor">|</span>
             </p>
-            <div className="hero-buttons" style={{ marginTop: '2rem' }}>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '16px', background: 'var(--surface)', border: '1px solid var(--glass-border)', padding: '8px 16px', borderRadius: 'var(--radius)', backdropFilter: 'blur(10px)' }}>
-                <span style={{ fontWeight: '600', color: 'var(--text)', display: 'flex', alignItems: 'center' }}><FileText className="btn-icon" style={{ marginRight: '6px' }} /> Resume</span>
-                <div style={{ display: 'flex', gap: '8px' }}>
-                  <button onClick={() => window.open('/Atul_Kumar_Resume.pdf', '_blank', 'noreferrer')} className="btn btn--primary" style={{ padding: '8px 16px', fontSize: '0.9rem', minWidth: 'auto', display: 'flex', alignItems: 'center' }}>
-                    <Eye className="btn-icon" style={{ marginRight: '6px' }} /> View
-                  </button>
-                  <button onClick={() => { const a = document.createElement('a'); a.href='/Atul_Kumar_Resume.pdf'; a.download='Atul_Kumar_Resume.pdf'; a.click(); }} className="btn btn--outline" style={{ padding: '8px 16px', fontSize: '0.9rem', minWidth: 'auto', display: 'flex', alignItems: 'center' }}>
-                    <Download className="btn-icon" style={{ marginRight: '6px' }} /> Download
-                  </button>
-                </div>
+
+            <div className="hero-bento-box" style={{ marginTop: '2.5rem', display: 'flex', flexDirection: 'column', gap: '1rem', maxWidth: '420px' }}>
+              {/* Primary Action */}
+              <button 
+                onClick={() => {
+                  const target = document.querySelector('#projects .section-title') || document.getElementById('projects');
+                  const navbar = document.getElementById('navbar');
+                  if (target) {
+                    const offset = navbar ? navbar.offsetHeight : 70;
+                    window.scrollTo({ top: target.offsetTop - offset - 20, behavior: 'smooth' });
+                  }
+                }} 
+                className="btn btn--primary" 
+                style={{ width: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '10px', padding: '16px', fontSize: '1.05rem', fontWeight: '600', borderRadius: '14px' }}
+              >
+                <FolderCode size={22} style={{ color: '#fbbf24' }} /> View My Work
+              </button>
+
+              {/* Secondary Actions Grid */}
+              <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '1rem' }}>
+                <button 
+                  onClick={() => {
+                    const target = document.querySelector('#contact .section-title') || document.getElementById('contact');
+                    const navbar = document.getElementById('navbar');
+                    if (target) {
+                      const offset = navbar ? navbar.offsetHeight : 70;
+                      window.scrollTo({ top: target.offsetTop - offset - 20, behavior: 'smooth' });
+                    }
+                  }} 
+                  className="bento-glass-btn" 
+                >
+                  <svg viewBox="0 0 24 24" fill="none" stroke="#34d399" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="22" height="22" style={{ color: '#34d399' }}><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                  Get in Touch
+                </button>
+
+                <button onClick={() => window.open('/Atul_Kumar_Resume.pdf', '_blank', 'noreferrer')} className="bento-glass-btn">
+                  <Eye size={22} style={{ color: '#f87171' }} /> Resume
+                </button>
+                
+                <button onClick={() => { const a = document.createElement('a'); a.href='/Atul_Kumar_Resume.pdf'; a.download='Atul_Kumar_Resume.pdf'; a.click(); }} className="bento-glass-btn">
+                  <Download size={22} style={{ color: '#c084fc' }} /> Download
+                </button>
               </div>
-              <button onClick={() => document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' })} className="btn btn--outline">View My Work ➔</button>
             </div>
 
             {/* Social Links */}
-            <div className="floating-social" style={{ marginTop: '1.5rem' }}>
+            <div className="floating-social" style={{ marginTop: '8.5rem', display: 'flex', gap: '10px', flexWrap: 'nowrap', width: 'max-content' }}>
               <button
                 onClick={() => window.open('https://github.com/atul-kumar-30', '_blank', 'noreferrer')}
                 className="social-icon github"

@@ -10,6 +10,7 @@ import Education from './components/Education';
 import Timeline from './components/Timeline';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import ScrollProgress from './components/ScrollProgress';
 
 function App() {
   const [appReady, setAppReady] = useState(false);
@@ -80,6 +81,7 @@ function App() {
 
   return (
     <>
+      <ScrollProgress />
       {!hideLoader && (
         <div className={`global-loader ${appReady ? 'fade-out' : ''}`}>
           <div className="loader-content">

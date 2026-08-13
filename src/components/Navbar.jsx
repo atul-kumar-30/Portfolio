@@ -5,10 +5,16 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuActive, setMenuActive] = useState(false);
   const [activeLink, setActiveLink] = useState('');
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 60);
+      
+      const totalScroll = document.documentElement.scrollTop;
+      const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scroll = totalScroll / windowHeight;
+      setScrollProgress(scroll * 100);
       
       // Update active link
       const sections = document.querySelectorAll('section[id]');
@@ -81,6 +87,7 @@ const Navbar = () => {
             </a>
           ))}
         </div>
+
         <div 
           className={`hamburger ${menuActive ? 'active' : ''}`} 
           id="hamburger"

@@ -59,7 +59,6 @@ const Skills = () => {
               <span className="skill-tag">RAG</span>
               <span className="skill-tag">LangGraph</span>
               <span className="skill-tag">LangChain</span>
-              <span className="skill-tag">Embeddings</span>
             </div>
           </div>
           <div className="skill-category">
