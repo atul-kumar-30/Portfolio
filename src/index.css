@@ -1442,7 +1442,7 @@ a {
 }
 
 .cert-btn-desktop {
-  display: none;
+  display: none !important;
 }
 
 .cert-btn-mobile {
@@ -1470,12 +1470,12 @@ a {
   }
   
   .cert-btn-desktop {
-    display: inline-flex;
+    display: inline-flex !important;
     margin-top: 0;
   }
   
   .cert-btn-mobile {
-    display: none;
+    display: none !important;
   }
 }
 
