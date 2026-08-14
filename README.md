@@ -30,7 +30,8 @@ This portfolio showcases my skills as a Software Engineer, featuring my technica
 *   **Interactive UI & Typography:** Smooth scroll reveals, uppercase navigation styling, dynamic typing animations, automatic stat counters, and a responsive mobile hamburger menu.
 *   **Visual Project Showcase:** Image-based project cards featuring high-quality screenshots for the Modern Expense Tracker, Deepfake Detection System, Air Quality Predictor, and AI Job Tracker.
 *   **Modern 2.5D Aesthetic:** Deep space dark theme, Tron-inspired 3D grid background, and sleek layered glassmorphism cards with dynamic 3D mouse tracking.
-*   **Advanced Contact Section:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI and direct social integrations including a one-click Gmail composer.
+*   **Advanced Contact Section:** Integrated with Formspree for immediate email delivery. Features a modern "Visitor Type" pill selection UI, symmetrically balanced glassmorphic panels, and direct social integrations.
+*   **Premium Credentials Display:** A horizontally scrolling, responsive ticket layout for certifications featuring custom skill tags and dynamic, brand-colored glowing typography.
 *   **No Status Bar Leaks:** All external links use `<button>` elements to prevent browser URL preview in the status bar on hover.
 
 ## 🛠️ Running Locally

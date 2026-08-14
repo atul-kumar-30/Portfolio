@@ -90,23 +90,10 @@ const Contact = () => {
                   <span className="quick-info-value">Dehradun, India</span>
                 </div>
               </div>
-              <div className="quick-info-card">
-                <span className="quick-info-icon"><Briefcase className="card-icon" style={{ margin: 0 }} /></span>
-                <div>
-                  <span className="quick-info-label">Available For</span>
-                  <span className="quick-info-value">Full-time &amp; Internships</span>
-                </div>
-              </div>
-              <div className="quick-info-card">
-                <span className="quick-info-icon"><Globe className="card-icon" style={{ margin: 0 }} /></span>
-                <div>
-                  <span className="quick-info-label">Work Preference</span>
-                  <span className="quick-info-value">Remote &amp; On-site</span>
-                </div>
-              </div>
+
             </div>
 
-            <div className="contact-socials" style={{ marginTop: '2rem' }}>
+            <div className="contact-socials" style={{ marginTop: 'auto' }}>
               <h4 style={{ fontSize: '0.9rem', color: 'var(--text-secondary)', marginBottom: '1rem', textTransform: 'uppercase', letterSpacing: '1px' }}>Find Me Online</h4>
               <div style={{ display: 'flex', gap: '1rem' }}>
                 <button

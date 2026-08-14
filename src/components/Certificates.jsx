@@ -6,24 +6,24 @@ const certs = [
     icon: ShieldCheck,
     iconColor: '#3b82f6', // blue
     title: 'Cybersecurity Analyst Job Simulation',
-    org: 'TATA Consultancy via Forage',
+    org: 'Tata Group via Forage',
     date: 'March 2025',
     orgBg: 'rgba(59, 130, 246, 0.15)',
     orgText: '#60a5fa',
     desc: <>Completed practical tasks in <strong className="cert-highlight">Identity & Access Management (IAM)</strong> fundamentals, <strong className="cert-highlight">IAM strategy assessment</strong>, and crafting custom IAM solutions.</>,
-    skills: ["Identity & Access Management", "Cybersecurity Strategy", "Threat Analysis", "IAM Architecture"],
+    skills: ["IAM Fundamentals", "IAM Strategy Assessment", "Custom IAM Solutions", "Platform Integration"],
     url: 'https://www.linkedin.com/posts/activity-7321257402689900546-9TKF',
   },
   {
     icon: Cloud,
     iconColor: '#ef4444', // red
     title: 'Oracle Cloud Infrastructure AI Foundations',
-    org: 'Oracle University',
+    org: 'Oracle',
     date: 'August 2025',
     orgBg: 'rgba(239, 68, 68, 0.15)',
     orgText: '#f87171',
-    desc: <><strong className="cert-highlight">Oracle Cloud Infrastructure 2025</strong> Certified AI Foundations Associate. Recognized by Oracle Corporation, valid until August 2028.</>,
-    skills: ["Cloud Infrastructure", "AI Fundamentals", "Machine Learning", "Generative AI Services"],
+    desc: <><strong className="cert-highlight">Oracle Cloud Infrastructure 2025</strong> Certified AI Foundations Associate. Recognized by Oracle Corporation, valid until August 2027.</>,
+    skills: ["AI & ML Basics", "Deep Learning (CNNs, RNNs)", "Generative AI & LLMs", "OCI AI Services", "Oracle 23ai"],
     url: 'https://www.linkedin.com/posts/activity-7367123225211777024-C59U',
   },
   {
@@ -35,7 +35,7 @@ const certs = [
     orgBg: 'rgba(16, 185, 129, 0.15)',
     orgText: '#34d399',
     desc: <>Completed online course covering <strong className="cert-highlight">Generative AI fundamentals</strong>, <strong className="cert-highlight">Large Language Models (LLMs)</strong>, and practical AI applications powered by Google Cloud.</>,
-    skills: ["Generative AI", "Large Language Models", "Prompt Engineering", "AI Ethics"],
+    skills: ["Generative AI Models", "Gen AI Applications", "AI Content Generation", "Responsible AI"],
     url: 'https://www.linkedin.com/posts/activity-7368271728440975362-ee-4',
   },
 ];
@@ -71,12 +71,18 @@ const CertCard = ({ cert }) => {
         
         <div className="cert-card-right">
           <div className="cert-header-row">
-            <h3 className="cert-gradient-title">{cert.title}</h3>
+            <h3 
+              className="cert-gradient-title"
+              style={{ backgroundImage: `linear-gradient(135deg, #ffffff 30%, ${cert.iconColor} 150%)` }}
+            >
+              {cert.title}
+            </h3>
             <button
-              className="btn btn--outline cert-btn-desktop"
+              className="premium-glass-btn cert-btn-desktop"
+              style={{ '--glow-color': cert.iconColor }}
               onClick={() => window.open(cert.url, '_blank', 'noreferrer')}
             >
-              <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} /> View
+              <ExternalLink className="btn-icon" /> View Credential
             </button>
           </div>
           
@@ -98,10 +104,11 @@ const CertCard = ({ cert }) => {
           )}
           
           <button
-            className="btn btn--outline cert-btn-mobile"
+            className="premium-glass-btn cert-btn-mobile"
+            style={{ '--glow-color': cert.iconColor }}
             onClick={() => window.open(cert.url, '_blank', 'noreferrer')}
           >
-            <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} /> View Credential
+            <ExternalLink className="btn-icon" /> View Credential
           </button>
         </div>
       </div>
