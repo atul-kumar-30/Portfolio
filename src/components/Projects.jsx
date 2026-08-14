@@ -1,5 +1,5 @@
 import React from "react";
-import { FolderCode, WalletCards, ScanFace, Wind, BriefcaseBusiness, ExternalLink } from 'lucide-react';
+import { FolderCode, WalletCards, ScanFace, Wind, BriefcaseBusiness, ExternalLink, CheckCircle2 } from 'lucide-react';
 
 const GitHubIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="btn-icon" style={{ marginRight: '6px' }}>
@@ -9,20 +9,50 @@ const GitHubIcon = () => (
 
 const projects = [
   {
-    title: "Expense Tracker",
-    icon: WalletCards,
-    image: "/Expense_Tracker.png",
-    alt: "Expense Tracker dashboard",
-    github: "https://github.com/atul-kumar-30/Expense_Tracker",
-    live: "https://expense-tracker-eosin-delta.vercel.app",
+    title: "Air Quality Predictor",
+    icon: Wind,
+    image: "/Air_Quality_predictor.png",
+    alt: "Air Quality Predictor dashboard",
+    imageClass: "project-screenshot--air",
+    github: "https://github.com/atul-kumar-30/Air-Quality-Predictor",
+    live: "https://air-quality-predictor-frontend.onrender.com",
     description:
-      "Full-stack expense tracking application with secure Supabase authentication, real-time PostgreSQL synchronization, CRUD operations, spending analytics, and a responsive React interface.",
+      "Full-stack machine-learning application using Random Forest to forecast PM2.5 levels. Integrates Open-Meteo data, FastAPI, SQLite, interactive charts, and environmental readings.",
     technologies: [
       "React.js",
-      "Supabase",
-      "PostgreSQL",
-      "JavaScript",
-      "CSS",
+      "FastAPI",
+      "Random Forest",
+      "SQLite",
+      "Docker",
+    ],
+    features: [
+      "24-hour PM2.5 forecasting",
+      "Interactive environmental charts",
+      "Real-time Open-Meteo integration",
+      "SQLite-based API caching"
+    ],
+  },
+  {
+    title: "AI Job Tracker",
+    icon: BriefcaseBusiness,
+    image: "/AI_Job_Tracker.png",
+    alt: "AI Job Tracker applications pipeline",
+    github: "https://github.com/atul-kumar-30/AI-Job-Tracker",
+    live: "https://ai-job-tracker-mu-one.vercel.app/",
+    description:
+      "AI-powered full-stack job tracker with JWT authentication, drag-and-drop application management, ATS resume scoring, and Gemini-powered cover-letter and email generation.",
+    technologies: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Gemini API",
+    ],
+    features: [
+      "AI-generated cover letters & recruiter emails",
+      "AI-powered ATS resume scoring",
+      "Drag-and-drop application pipeline",
+      "Secure JWT authentication"
     ],
   },
   {
@@ -42,40 +72,34 @@ const projects = [
       "OpenCV",
       "MTCNN",
     ],
-  },
-  {
-    title: "Air Quality Predictor",
-    icon: Wind,
-    image: "/Air_Quality_predictor.png",
-    alt: "Air Quality Predictor dashboard",
-    imageClass: "project-screenshot--air",
-    github: "https://github.com/atul-kumar-30/Air-Quality-Predictor",
-    live: "https://air-quality-predictor-frontend.onrender.com",
-    description:
-      "Full-stack machine-learning application using Random Forest to forecast PM2.5 levels. Integrates Open-Meteo data, FastAPI, SQLite, interactive charts, and environmental readings.",
-    technologies: [
-      "React.js",
-      "FastAPI",
-      "Random Forest",
-      "SQLite",
-      "Docker",
+    features: [
+      "Image & video deepfake detection",
+      "EfficientNet-B4 inference pipeline",
+      "MTCNN-based face extraction",
+      "Confidence scoring via Flask REST API"
     ],
   },
   {
-    title: "AI Job Tracker",
-    icon: BriefcaseBusiness,
-    image: "/AI_Job_Tracker.png",
-    alt: "AI Job Tracker applications pipeline",
-    github: "https://github.com/atul-kumar-30/AI-Job-Tracker",
-    live: "https://ai-job-tracker-mu-one.vercel.app/",
+    title: "Expense Tracker",
+    icon: WalletCards,
+    image: "/Expense_Tracker.png",
+    alt: "Expense Tracker dashboard",
+    github: "https://github.com/atul-kumar-30/Expense_Tracker",
+    live: "https://expense-tracker-eosin-delta.vercel.app",
     description:
-      "AI-powered full-stack job tracker with JWT authentication, drag-and-drop application management, ATS resume scoring, and Gemini-powered cover-letter and email generation.",
+      "Full-stack expense tracking application with secure Supabase authentication, real-time PostgreSQL synchronization, CRUD operations, spending analytics, and a responsive React interface.",
     technologies: [
       "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Gemini API",
+      "Supabase",
+      "PostgreSQL",
+      "JavaScript",
+      "Tailwind CSS",
+    ],
+    features: [
+      "Real-time Supabase synchronization",
+      "Interactive spending analytics",
+      "Transaction CRUD, filtering & search",
+      "Supabase Auth with Row Level Security"
     ],
   },
 ];
@@ -126,6 +150,17 @@ const ProjectCard = ({ project }) => {
         <h3><project.icon className="card-icon" style={{ marginRight: '8px' }} /> {project.title}</h3>
 
         <p>{project.description}</p>
+
+        {project.features && (
+          <ul className="project-features">
+            {project.features.map((feature, idx) => (
+              <li key={idx}>
+                <CheckCircle2 className="feature-icon" size={16} />
+                <span>{feature}</span>
+              </li>
+            ))}
+          </ul>
+        )}
 
         <div className="tech-tags">
           {project.technologies.map((technology) => (

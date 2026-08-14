@@ -4,26 +4,110 @@ import { Award, ShieldCheck, Cloud, Bot, ExternalLink } from 'lucide-react';
 const certs = [
   {
     icon: ShieldCheck,
+    iconColor: '#3b82f6', // blue
     title: 'Cybersecurity Analyst Job Simulation',
-    org: 'TATA Consultancy via Forage — March 2025',
-    desc: 'Completed practical tasks in Identity & Access Management (IAM) fundamentals, IAM strategy assessment, and crafting custom IAM solutions.',
+    org: 'TATA Consultancy via Forage',
+    date: 'March 2025',
+    orgBg: 'rgba(59, 130, 246, 0.15)',
+    orgText: '#60a5fa',
+    desc: <>Completed practical tasks in <strong className="cert-highlight">Identity & Access Management (IAM)</strong> fundamentals, <strong className="cert-highlight">IAM strategy assessment</strong>, and crafting custom IAM solutions.</>,
+    skills: ["Identity & Access Management", "Cybersecurity Strategy", "Threat Analysis", "IAM Architecture"],
     url: 'https://www.linkedin.com/posts/activity-7321257402689900546-9TKF',
   },
   {
     icon: Cloud,
+    iconColor: '#ef4444', // red
     title: 'Oracle Cloud Infrastructure AI Foundations',
-    org: 'Oracle University — August 2025',
-    desc: 'Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate. Recognized by Oracle Corporation, valid until August 2028.',
+    org: 'Oracle University',
+    date: 'August 2025',
+    orgBg: 'rgba(239, 68, 68, 0.15)',
+    orgText: '#f87171',
+    desc: <><strong className="cert-highlight">Oracle Cloud Infrastructure 2025</strong> Certified AI Foundations Associate. Recognized by Oracle Corporation, valid until August 2028.</>,
+    skills: ["Cloud Infrastructure", "AI Fundamentals", "Machine Learning", "Generative AI Services"],
     url: 'https://www.linkedin.com/posts/activity-7367123225211777024-C59U',
   },
   {
     icon: Bot,
+    iconColor: '#10b981', // green
     title: 'Introduction to Generative AI',
-    org: 'Google Cloud & Simplilearn SkillUP — September 2025',
-    desc: 'Completed online course covering Generative AI fundamentals, Large Language Models (LLMs), and practical AI applications powered by Google Cloud.',
+    org: 'Google Cloud & Simplilearn',
+    date: 'September 2025',
+    orgBg: 'rgba(16, 185, 129, 0.15)',
+    orgText: '#34d399',
+    desc: <>Completed online course covering <strong className="cert-highlight">Generative AI fundamentals</strong>, <strong className="cert-highlight">Large Language Models (LLMs)</strong>, and practical AI applications powered by Google Cloud.</>,
+    skills: ["Generative AI", "Large Language Models", "Prompt Engineering", "AI Ethics"],
     url: 'https://www.linkedin.com/posts/activity-7368271728440975362-ee-4',
   },
 ];
+
+const CertCard = ({ cert }) => {
+  const cardRef = React.useRef(null);
+  
+  const handleMouseMove = (e) => {
+    if (!cardRef.current) return;
+    const rect = cardRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+    cardRef.current.style.setProperty('--mouse-x', `${x}px`);
+    cardRef.current.style.setProperty('--mouse-y', `${y}px`);
+  };
+
+  return (
+    <div 
+      ref={cardRef}
+      className="cert-card cert-card-spotlight"
+      onMouseMove={handleMouseMove}
+    >
+      <div className="cert-spotlight"></div>
+      <div className="cert-card-content">
+        <div className="cert-card-left">
+          <div 
+            className="cert-icon-glow" 
+            style={{ color: cert.iconColor, filter: `drop-shadow(0 0 20px ${cert.iconColor}A0)` }}
+          >
+            <cert.icon size={48} />
+          </div>
+        </div>
+        
+        <div className="cert-card-right">
+          <div className="cert-header-row">
+            <h3 className="cert-gradient-title">{cert.title}</h3>
+            <button
+              className="btn btn--outline cert-btn-desktop"
+              onClick={() => window.open(cert.url, '_blank', 'noreferrer')}
+            >
+              <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} /> View
+            </button>
+          </div>
+          
+          <div className="cert-meta">
+            <span className="cert-badge" style={{ backgroundColor: cert.orgBg, color: cert.orgText }}>
+              {cert.org}
+            </span>
+            <span className="cert-date">{cert.date}</span>
+          </div>
+          
+          <p className="cert-desc-modern">{cert.desc}</p>
+          
+          {cert.skills && (
+            <div className="cert-skills">
+              {cert.skills.map(skill => (
+                <span key={skill} className="cert-skill-tag">{skill}</span>
+              ))}
+            </div>
+          )}
+          
+          <button
+            className="btn btn--outline cert-btn-mobile"
+            onClick={() => window.open(cert.url, '_blank', 'noreferrer')}
+          >
+            <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} /> View Credential
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Certificates = () => (
   <section id="certifications" className="section section--alt">
@@ -31,18 +115,7 @@ const Certificates = () => (
       <h2 className="section-title reveal"><Award className="section-icon" /> <span className="accent">Certifications</span></h2>
       <div className="certs-grid">
         {certs.map(cert => (
-          <div key={cert.title} className="cert-card">
-            <div className="cert-icon"><cert.icon size={32} /></div>
-            <h3>{cert.title}</h3>
-            <p className="cert-org">{cert.org}</p>
-            <p className="cert-desc">{cert.desc}</p>
-            <button
-              className="btn btn--outline"
-              onClick={() => window.open(cert.url, '_blank', 'noreferrer')}
-            >
-              <ExternalLink className="btn-icon" style={{ marginRight: '6px' }} /> View Credential
-            </button>
-          </div>
+          <CertCard key={cert.title} cert={cert} />
         ))}
       </div>
     </div>

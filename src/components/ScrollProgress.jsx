@@ -27,11 +27,11 @@ const ScrollProgress = () => {
         left: 0,
         right: 0,
         height: '3px',
-        background: 'linear-gradient(90deg, #991b1b, #dc2626, #ef4444)',
+        background: 'linear-gradient(90deg, #064e3b, #047857, #10b981)',
         transformOrigin: '0%',
         transform: 'scaleX(0)',
         zIndex: 9999,
-        boxShadow: '0 0 15px rgba(220, 38, 38, 0.8)'
+        boxShadow: '0 0 15px rgba(4, 120, 87, 0.8)'
       }}
       ref={barRef}
     />
