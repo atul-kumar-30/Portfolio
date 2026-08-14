@@ -1545,11 +1545,26 @@ a {
   line-height: 1.7;
 }
 
+.cert-skills-container {
+  margin-top: 1.2rem;
+}
+
+.cert-skills-label {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 0.8rem;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .cert-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 0.5rem;
-  margin-top: 1rem;
 }
 
 .cert-skill-tag {

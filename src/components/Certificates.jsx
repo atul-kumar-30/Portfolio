@@ -96,10 +96,18 @@ const CertCard = ({ cert }) => {
           <p className="cert-desc-modern">{cert.desc}</p>
           
           {cert.skills && (
-            <div className="cert-skills">
-              {cert.skills.map(skill => (
-                <span key={skill} className="cert-skill-tag">{skill}</span>
-              ))}
+            <div className="cert-skills-container">
+              <span 
+                className="cert-skills-label"
+                style={{ backgroundImage: `linear-gradient(90deg, ${cert.iconColor}, #ffffff)` }}
+              >
+                Skills Demonstrated:
+              </span>
+              <div className="cert-skills">
+                {cert.skills.map(skill => (
+                  <span key={skill} className="cert-skill-tag">{skill}</span>
+                ))}
+              </div>
             </div>
           )}
           
