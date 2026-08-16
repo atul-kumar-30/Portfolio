@@ -3,16 +3,16 @@ import { Award, ShieldCheck, Cloud, Bot, ExternalLink } from 'lucide-react';
 
 const certs = [
   {
-    icon: ShieldCheck,
-    iconColor: '#3b82f6', // blue
-    title: 'Cybersecurity Analyst Job Simulation',
-    org: 'Tata Group via Forage',
-    date: 'March 2025',
-    orgBg: 'rgba(59, 130, 246, 0.15)',
-    orgText: '#60a5fa',
-    desc: <>Completed practical tasks in <strong className="cert-highlight">Identity & Access Management (IAM)</strong> fundamentals, <strong className="cert-highlight">IAM strategy assessment</strong>, and crafting custom IAM solutions.</>,
-    skills: ["IAM Fundamentals", "IAM Strategy Assessment", "Custom IAM Solutions", "Platform Integration"],
-    url: 'https://www.linkedin.com/posts/activity-7321257402689900546-9TKF',
+    icon: Bot,
+    iconColor: '#10b981', // green
+    title: 'Introduction to Generative AI',
+    org: 'Google Cloud & Simplilearn',
+    date: 'September 2025',
+    orgBg: 'rgba(16, 185, 129, 0.15)',
+    orgText: '#34d399',
+    desc: <>Completed online course covering <strong className="cert-highlight">Generative AI fundamentals</strong>, <strong className="cert-highlight">Large Language Models (LLMs)</strong>, and practical AI applications powered by Google Cloud.</>,
+    skills: ["Generative AI Models", "Gen AI Applications", "AI Content Generation", "Responsible AI"],
+    url: 'https://www.linkedin.com/posts/activity-7368271728440975362-ee-4',
   },
   {
     icon: Cloud,
@@ -27,16 +27,16 @@ const certs = [
     url: 'https://www.linkedin.com/posts/activity-7367123225211777024-C59U',
   },
   {
-    icon: Bot,
-    iconColor: '#10b981', // green
-    title: 'Introduction to Generative AI',
-    org: 'Google Cloud & Simplilearn',
-    date: 'September 2025',
-    orgBg: 'rgba(16, 185, 129, 0.15)',
-    orgText: '#34d399',
-    desc: <>Completed online course covering <strong className="cert-highlight">Generative AI fundamentals</strong>, <strong className="cert-highlight">Large Language Models (LLMs)</strong>, and practical AI applications powered by Google Cloud.</>,
-    skills: ["Generative AI Models", "Gen AI Applications", "AI Content Generation", "Responsible AI"],
-    url: 'https://www.linkedin.com/posts/activity-7368271728440975362-ee-4',
+    icon: ShieldCheck,
+    iconColor: '#3b82f6', // blue
+    title: 'Cybersecurity Analyst Job Simulation',
+    org: 'Tata Group via Forage',
+    date: 'March 2025',
+    orgBg: 'rgba(59, 130, 246, 0.15)',
+    orgText: '#60a5fa',
+    desc: <>Completed practical tasks in <strong className="cert-highlight">Identity & Access Management (IAM)</strong> fundamentals, <strong className="cert-highlight">IAM strategy assessment</strong>, and crafting custom IAM solutions.</>,
+    skills: ["IAM Fundamentals", "IAM Strategy Assessment", "Custom IAM Solutions", "Platform Integration"],
+    url: 'https://www.linkedin.com/posts/activity-7321257402689900546-9TKF',
   },
 ];
 
